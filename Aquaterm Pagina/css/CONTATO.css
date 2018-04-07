@@ -1,0 +1,522 @@
+<<<<<<< HEAD:Projeto Aquario - BRANCO/css/CONTATO.css
+*{
+	margin:0px;
+	padding: 0px;
+	box-sizing: border-box;
+
+}
+
+html, body{
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	background-color: white;
+	background-size: cover;
+	-webkit-background-size: cover; 
+	-moz-background-size: cover; 
+	-ms-background-size: cover; 
+	-o-background-size: cover; 
+	padding-top:2.5em;
+
+
+}
+/* INICIO CSS DO MENU*/
+.logo {
+	width: 260px;
+    height: 70px;
+    padding-left: 40px;
+    padding-top: 5px;
+	padding-bottom: 5px;
+    cursor: pointer;
+	float: left;
+	margin-left: 110px;
+}
+
+ul{
+	top: 0px;
+	z-index: 99999999;
+	position: fixed;
+	width: 100%;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #848484;
+	box-shadow: 0px 5px 25px #73737359;
+}
+
+.loginIcon{
+	width: 40px;
+	float: right;
+}
+
+.logar {	
+	float: right;
+	display: block;
+	color: black;
+	text-align: center;
+	text-decoration: none;
+	margin-left:40px;
+	margin-right:150px;
+}
+
+li a{
+	float: right;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 15px 15px;
+	padding-top: 15px;
+	text-decoration: none;
+
+}
+
+.menu a:hover:not(.active){
+	color: white;
+	background-color: rgba(000, 000, 000, 0.3);
+}
+
+p{
+	font-family: roboto,sans-serif;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	
+}
+
+p#texto{
+	padding-bottom:40px;
+	padding-left:15px;
+	padding-right:15px;
+}
+
+.active:hover{
+		transition: all 0.3s;
+        background: rgb(114,50,125); 
+
+}
+/*FIM CSS DO MENU*/
+/*INICIO CSS DO CONTEUDO*/
+
+.riscaHori {
+    width: 100%;
+    opacity: 0.5;
+    margin-bottom: 15px;
+    margin-top: 70px;
+    padding: 5px;
+	padding-left:20px;
+    font-size: 30px;
+    border-bottom: 1px solid #737373;
+}
+
+.tam {
+	width: 50px;
+	
+}
+form {
+    /* Apenas para centralizar o form na página */
+    margin: auto;
+    width: 400em;
+    /* Para ver as bordas do formulário */
+   
+}
+
+form div + div {
+    margin-top: 1em;
+}
+
+label {
+    /*Para ter certeza que todas as labels tem o mesmo tamanho e estão propriamente alinhadas */
+    display: inline-block;
+    width: 300px;
+    text-align: right;
+}
+
+input, textarea {
+    /* Para certificar-se que todos os campos de texto têm as mesmas configurações de fonte. Por padrão, textareas ter uma fonte monospace*/
+    font: 1em sans-serif;
+
+    /* Para dar o mesmo tamanho a todos os campo de texto */
+    width: 300px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    /* Para harmonizar o look & feel das bordas nos campos de texto*/
+    border: 1px solid #999;
+	border-radius: 10px;
+	padding-left: 5px;
+}
+
+input:focus, textarea:focus {
+    /* Dar um pouco de destaque nos elementos ativos */
+    border-color: #000;
+}
+
+textarea {
+    /* Para alinhar corretamente os campos de texto de várias linhas com sua label*/
+    vertical-align: top;
+
+    /* Para dar espaço suficiente para digitar algum texto */
+    height: 5em;
+
+    /* Para permitir aos usuários redimensionarem qualquer textarea verticalmente. Ele não funciona em todos os browsers */
+    resize: vertical;
+}
+
+.button {
+    /* Para posicionar os botões para a mesma posição dos campos de texto */
+    padding-left: 90px; /* mesmo tamanho que os elementos do tipo label */
+}
+button {
+    /* Esta margem extra representa aproximadamente o mesmo espaço que o espaço entre as labels e os seus campos de texto*/
+    margin-left: 21.5em;
+}
+
+.divform {
+	font-family: roboto, sans-serif;
+	color: black;
+	font-size: bold;
+	
+}
+#conteudoDaP {
+    background-color: #f4f4f4;
+    width: 75%;
+	padding-bottom:2em;
+    margin-left: 13%;
+	margin-bottom:10%;
+	border-radius: 5px;
+}
+/*INICIO CSS DO CONTEUDO*/
+
+
+/*INICIO DO RODAPE*/
+	div#rodape{
+	position: relative;
+	background-color: rgba(000, 000, 000, 0.3);
+	background-size: cover;
+	width: 100%;
+	min-height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 60px;
+}
+
+div#risca{
+	width: 2px;
+    height: 170px;
+    background-color: white;
+    margin: 45px;
+    padding: 1px;
+    float: left;
+}
+
+div#infor{
+	width: 415px;
+	height: 170px;
+	float: left;
+}
+
+#redeSoc {
+	width: 415px;
+	height: 170px;
+	float: left;
+}
+
+.redeIcon{
+    width: 100px;
+    cursor: pointer;
+    float: left;
+	padding: 15px;
+	margin-top: 22px;
+
+}
+
+#titleRede{
+	text-align: center;
+	font-size: 20px;
+	color: white;
+}
+
+p#titulo{
+	text-align: center;
+	font-size: 20px;
+	color: white;
+}
+p#info{
+	font-size: 17px;
+	color: white;
+}
+/*FIM DO RODAPE*/
+::-webkit-scrollbar {
+    width:8px;
+    height:10px;
+    background-color: transparent;
+
+}
+::-webkit-scrollbar-thumb:vertical {
+	
+    background:rgba(7,48,85,0.9);
+} 
+::-webkit-scrollbar-thumb:horizontal {
+	border-radius: 40px;
+    background:rgba(7,48,85,0.9);
+
+}
+
+
+
+
+
+=======
+*{
+	margin:0px;
+	padding: 0px;
+	box-sizing: border-box;
+
+}
+
+html, body{
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	background-color: white;
+	background-size: cover;
+	-webkit-background-size: cover; 
+	-moz-background-size: cover; 
+	-ms-background-size: cover; 
+	-o-background-size: cover; 
+
+
+}
+/* INICIO CSS DO MENU*/
+.logo {
+	width: 260px;
+    height: 70px;
+    padding-left: 40px;
+    padding-top: 5px;
+	padding-bottom: 5px;
+    cursor: pointer;
+	float: left;
+	margin-left: 110px;
+}
+
+ul{
+	z-index: 99999999;
+	width: 100%;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #848484;
+	box-shadow: 0px 5px 25px #73737359;
+}
+
+.loginIcon{
+	width: 40px;
+	float: right;
+}
+
+.logar {	
+	float: right;
+	display: block;
+	color: black;
+	text-align: center;
+	text-decoration: none;
+	margin-left:40px;
+	margin-right:150px;
+}
+
+li a{
+	float: right;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 15px 15px;
+	padding-top: 15px;
+	text-decoration: none;
+
+}
+
+.menu a:hover:not(.active){
+	color: white;
+	background-color: rgba(000, 000, 000, 0.3);
+}
+
+p{
+	font-family: roboto,sans-serif;
+	padding-bottom: 10px;
+	padding-top: 10px;
+
+}
+/*FIM CSS DO MENU*/
+
+
+.active:hover{
+		transition: all 0.3s;
+        background: rgb(114,50,125); 
+
+}
+/*INICIO CSS DO CONTEUDO*/
+.riscaHori {
+    width: 100%;
+    opacity: 0.5;
+    margin-bottom: 15px;
+    margin-top: 70px;
+    padding: 1px;
+    font-size: 30px;
+    border-bottom: 1px solid #737373;
+}
+
+form {
+    /* Apenas para centralizar o form na página */
+    margin: 0 auto;
+    width: 400px;
+    /* Para ver as bordas do formulário */
+   
+}
+
+form div + div {
+    margin-top: 1em;
+}
+
+label {
+    /*Para ter certeza que todas as labels tem o mesmo tamanho e estão propriamente alinhadas */
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+
+input, textarea {
+    /* Para certificar-se que todos os campos de texto têm as mesmas configurações de fonte. Por padrão, textareas ter uma fonte monospace*/
+    font: 1em sans-serif;
+
+    /* Para dar o mesmo tamanho a todos os campo de texto */
+    width: 300px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    /* Para harmonizar o look & feel das bordas nos campos de texto*/
+    border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+    /* Dar um pouco de destaque nos elementos ativos */
+    border-color: #000;
+}
+
+textarea {
+    /* Para alinhar corretamente os campos de texto de várias linhas com sua label*/
+    vertical-align: top;
+
+    /* Para dar espaço suficiente para digitar algum texto */
+    height: 5em;
+
+    /* Para permitir aos usuários redimensionarem qualquer textarea verticalmente. Ele não funciona em todos os browsers */
+    resize: vertical;
+}
+
+.button {
+    /* Para posicionar os botões para a mesma posição dos campos de texto */
+    padding-left: 90px; /* mesmo tamanho que os elementos do tipo label */
+}
+button {
+    /* Esta margem extra representa aproximadamente o mesmo espaço que o espaço entre as labels e os seus campos de texto*/
+    margin-left: .5em;
+}
+
+
+#conteudoDaP {
+    background-color: #f4f4f4;
+    width: 75%;
+    margin-left: 13%;
+	border-radius: 5px;
+}
+/*INICIO CSS DO CONTEUDO*/
+
+
+/*INICIO DO RODAPE*/
+	div#rodape{
+	position: relative;
+	background-color: rgba(000, 000, 000, 0.3);
+	background-size: cover;
+	width: 100%;
+	min-height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 60px;
+}
+
+div#risca{
+	width: 2px;
+    height: 170px;
+    background-color: white;
+    margin: 45px;
+    padding: 1px;
+    float: left;
+}
+
+div#infor{
+	width: 415px;
+	height: 170px;
+	float: left;
+}
+
+#redeSoc {
+	width: 415px;
+	height: 170px;
+	float: left;
+}
+
+.redeIcon{
+    width: 100px;
+    cursor: pointer;
+    float: left;
+	padding: 15px;
+	margin-top: 22px;
+
+}
+
+#titleRede{
+	text-align: center;
+	font-size: 20px;
+	color: white;
+}
+
+p#titulo{
+	text-align: center;
+	font-size: 20px;
+	color: white;
+}
+p#info{
+	font-size: 17px;
+	color: white;
+}
+/*FIM DO RODAPE*/
+::-webkit-scrollbar {
+    width:8px;
+    height:10px;
+    background-color: transparent;
+
+}
+::-webkit-scrollbar-thumb:vertical {
+	
+    background:rgba(7,48,85,0.9);
+} 
+::-webkit-scrollbar-thumb:horizontal {
+	border-radius: 40px;
+    background:rgba(7,48,85,0.9);
+
+}
+
+
+
+
+
+>>>>>>> c2296aaad046dc7c983b8228264144581fd447b4:Aquaterm Pagina/css/CONTATO.css
