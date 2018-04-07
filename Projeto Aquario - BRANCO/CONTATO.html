@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Padrão</title>
+		<title>CONTATO</title>
 		<link rel="stylesheet" type="text/css" href="css/CONTATO.css">
 		<meta charset="UTF-8">
 	</head>
@@ -9,14 +9,14 @@
 		<!-- INICIO DO MENU -->
 		<ul>
 			<a href="inicio.html"><img class="logo" src="img/peixinho2.png"></a>
-			<li class="logar"><a href="index.html" target="blank" title="Entrar no sistema"><img class="loginIcon" src="img/loginB.png" a href="#"></a>
+			<li class="logar"> <a href="index.html" target="blank" title="Entrar no sistema"><img class="loginIcon" src="img/loginB.png" a href="#"></a>
 			
 			</li>
 			
-			<li class="menu"><a href="#"><p>MENU 1</p></a></li>
-			<li class="menu"><a href="#"><p>CONTATO</p></a></li>
-			<li class="menu"><a href="#"><p>MENU 3</p></a></li>
-			<li class="menu"><a href="#"><p>MENU 4</p></a></li>
+			<li class="menu"><a href="pagePadrao.html"><p>MENU 1</p></a></li>
+			<li class="menu"><a href="CONTATO.html"><p>CONTATO</p></a></li>
+			<li class="menu"><a href="pagePadrao.html"><p>MENU 3</p></a></li>
+			<li class="menu"><a href="pagePadrao.html"><p>MENU 4</p></a></li>
 		</ul>
 		<!-- FIM DO MENU -->	
 		
@@ -26,24 +26,24 @@
 			
 			
 			<div class="riscaHori">CONTATO</div>
-			<p>Está precisando de um help? Entre em contato com a gente que te ajudaremos!
+			<p id="texto">Está precisando de um help? Entre em contato com a gente que te ajudaremos!
 			<br><br>
-			Aenean ac pulvinar justo, sit amet bibendum purus. In hac habitasse platea dictumst. Donec ac molestie eros. Aenean malesuada eu nunc ut sollicitudin. Etiam sollicitudin auctor lacus ut pretium. Sed interdum gravida enim sed dignissim. Mauris tempor feugiat leo vitae ullamcorper. Curabitur finibus scelerisque justo, sit amet cursus enim feugiat eu. Donec suscipit justo iaculis, elementum lectus nec, placerat augue. Suspendisse potenti.
+			Deixe aqui embaixo seus dados e a mensagem que deseja enviar que responderemos assim que possível :)
 			</p>
 			
 			<form action="#" method="post" name="Contato">
-				<div>
+				<div class="divform">
 					<label for="nome">Nome:</label>
-					<input type="text" id="nome" />
+					<input placeholder="Seu nome" type="text" id="nome" />
 				</div>
-				<div>
+				<div class="divform">
 					<label for="email">E-mail:</label>
-					<input type="email" id="email" />
+					<input placeholder="Seu e-mail" type="email" id="email" />
 				</div>
-				<div>
+				<div class="divform">
 					<label for="msg">Mensagem:</label>
-					<textarea id="msg"></textarea>
-				</div>
+					<textarea placeholder="Sua mensagem" id="msg"></textarea>
+				</div class="divform">
 				<div class="button">
 					<button type="submit">Enviar sua mensagem</button>
 				</div>
