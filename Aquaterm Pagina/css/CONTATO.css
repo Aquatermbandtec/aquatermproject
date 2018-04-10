@@ -17,7 +17,6 @@ body{
 	-moz-background-size: cover; 
 	-ms-background-size: cover; 
 	-o-background-size: cover; 
-	padding-top:2.5em;
 
 
 }
@@ -34,9 +33,7 @@ body{
 }
 
 ul{
-	top: 0px;
 	z-index: 99999999;
-	position: fixed;
 	width: 100%;
 	list-style-type: none;
 	margin: 0;
@@ -81,42 +78,31 @@ p{
 	font-family: roboto,sans-serif;
 	padding-bottom: 10px;
 	padding-top: 10px;
-	
-}
 
-p#texto{
-	padding-bottom:40px;
-	padding-left:15px;
-	padding-right:15px;
 }
+/*FIM CSS DO MENU*/
+
 
 .active:hover{
 		transition: all 0.3s;
         background: rgb(114,50,125); 
 
 }
-/*FIM CSS DO MENU*/
 /*INICIO CSS DO CONTEUDO*/
-
 .riscaHori {
     width: 100%;
     opacity: 0.5;
     margin-bottom: 15px;
     margin-top: 70px;
-    padding: 5px;
-	padding-left:20px;
+    padding: 1px;
     font-size: 30px;
     border-bottom: 1px solid #737373;
 }
 
-.tam {
-	width: 50px;
-	
-}
 form {
     /* Apenas para centralizar o form na página */
-    margin: auto;
-    width: 1000px;
+    margin: 0 auto;
+    width: 400px;
     /* Para ver as bordas do formulário */
    
 }
@@ -128,7 +114,7 @@ form div + div {
 label {
     /*Para ter certeza que todas as labels tem o mesmo tamanho e estão propriamente alinhadas */
     display: inline-block;
-    width: 300px;
+    width: 90px;
     text-align: right;
 }
 
@@ -143,8 +129,6 @@ input, textarea {
 
     /* Para harmonizar o look & feel das bordas nos campos de texto*/
     border: 1px solid #999;
-	border-radius: 10px;
-	padding-left: 5px;
 }
 
 input:focus, textarea:focus {
@@ -169,21 +153,14 @@ textarea {
 }
 button {
     /* Esta margem extra representa aproximadamente o mesmo espaço que o espaço entre as labels e os seus campos de texto*/
-    margin-left: 21.5em;
+    margin-left: .5em;
 }
 
-.divform {
-	font-family: roboto, sans-serif;
-	color: black;
-	font-size: bold;
-	
-}
+
 #conteudoDaP {
     background-color: #f4f4f4;
     width: 75%;
-	padding-bottom:2em;
     margin-left: 13%;
-	margin-bottom:10%;
 	border-radius: 5px;
 }
 /*INICIO CSS DO CONTEUDO*/
