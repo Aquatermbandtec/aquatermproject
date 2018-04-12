@@ -1,0 +1,491 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: white;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+}
+
+
+/*INICIO DO CSS DO SLIDER*/
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0
+}
+
+.mySlides {
+    display: none
+}
+
+img {
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    margin: auto;
+}
+
+/* BOTÃO DE IR E VOLTAR <> */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    background-color: rgba(000, 000, 000, 0.3);
+}
+
+/* POSIÇÃO DO BOTÃO NEXT */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+    /* MOSTRAR COR AO MUDAR IMAGENS */
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+
+/* TEXTO DA LEGENDA */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 20px 12px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(000, 000, 000, 0.3);
+}
+
+
+/* ANIMAÇÃO FAD */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next, .text {
+        font-size: 11px
+    }
+}
+/*FIM DO CSS DO SLIDER*/
+
+.logo {
+    width: 260px;
+    height: 70px;
+    padding-left: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    float: left;
+    margin-left: 110px;
+}
+
+ul {
+    z-index: 99999999;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0px 3px 15px #737373;
+}
+
+.loginIcon {
+    width: 40px;
+    float: right;
+}
+
+.logar {
+    float: right;
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 40px;
+    margin-right: 150px;
+}
+
+li a {
+    float: right;
+    display: block;
+    color: #737373;
+    text-align: center;
+    padding: 15px 15px;
+    padding-top: 15px;
+    text-decoration: none;
+}
+
+.menu a:hover:not(.active) {
+    color: black;
+    background-color: rgba(000, 000, 000, 0.3);
+}
+
+p {
+    font-family: roboto,sans-serif;
+    font-style: bold;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.active:hover {
+    transition: all 0.3s;
+    background: rgb(114,50,125);
+}
+
+.riscaHori {
+    width: 70%;
+    opacity: 0.5;
+    margin-bottom: 15px;
+    margin-top: 70px;
+    margin-left: 15%;
+    padding: 1px;
+    font-size: 30px;
+    border-bottom: 1px solid #737373;
+}
+
+div#blocos {
+    position: relative;
+    background-color: white;
+    background-size: cover;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    --align-items: center;
+    flex-wrap: wrap;
+}
+
+    div#blocos h1 {
+        text-align: center;
+        color: #333333;
+        font-family: Roboto,sans-serif;
+        padding-bottom: 10px;
+    }
+
+
+div#bloco1 {
+    width: 300px;
+    height: 370px;
+    background-color: rgba(000, 000, 000, 0.1);
+    margin: 10px;
+    padding: 20px;
+    float: left;
+}
+
+p#qmSomos {
+    font-family: Roboto,sans-serif;
+    font-size: 20px;
+    margin-top: 5px;
+    text-decoration: none;
+    color: #737373;
+    text-align: center;
+}
+
+div#bloco1 img {
+    width: 120px;
+    height: 120px;
+    margin-left: 40px;
+    margin-top: -10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#bloco2 {
+    width: 300px;
+    height: 370px;
+    background-color: rgba(000, 000, 000, 0.1);
+    margin: 10px;
+    padding: 20px;
+    display: inline;
+    float: left;
+}
+
+p#projet {
+    font-family: Roboto,sans-serif;
+    font-size: 20px;
+    margin-top: 5px;
+    text-decoration: none;
+    color: #737373;
+    text-align: center;
+}
+
+div#bloco2 img {
+    width: 120px;
+    height: 120px;
+    margin-left: 40px;
+    margin-top: -10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#bloco3 {
+    width: 300px;
+    height: 370px;
+    background-color: rgba(000, 000, 000, 0.1);
+    margin: 10px;
+    padding: 20px;
+    display: inline;
+    float: left;
+}
+
+p#ideia {
+    font-family: Roboto,sans-serif;
+    font-size: 20px;
+    margin-top: 5px;
+    text-decoration: none;
+    color: #737373;
+    text-align: center;
+}
+
+div#bloco3 img {
+    width: 120px;
+    height: 120px;
+    margin-left: 40px;
+    margin-top: -10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#integrantes {
+    width: 100%;
+    background-color: rgba(000, 000, 000, 0.3);
+    min-height: 365px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+p.inte {
+    padding: 5px;
+    text-align: center;
+    font-family: Roboto,sans-serif;
+    font-size: 30px;
+    color: #dee5ef;
+    width: 100%;
+}
+
+div#integrante1 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-image: url(../img/integrante11.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+p#int1 {
+    margin-top: 140px;
+    text-align: center;
+    font-family: Roboto,sans-serif;
+    color: white;
+    font-size: 17px;
+}
+
+div#integrante2 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+p#int2 {
+    margin-top: 135px;
+    text-align: center;
+    font-family: Roboto,sans-serif;
+    color: white;
+    font-size: 17px;
+}
+
+div#integrante3 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+p#int3 {
+    margin-top: 135px;
+    text-align: center;
+    font-family: Roboto,sans-serif;
+    color: white;
+    font-size: 17px;
+}
+
+div#integrante4 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-image: url(../img/integrante4.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+p#int4 {
+    margin-top: 135px;
+    text-align: center;
+    font-family: Roboto,sans-serif;
+    color: white;
+    font-size: 17px;
+}
+
+div#integrante5 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-image: url(../img/integrante5.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+p#int5 {
+    margin-top: 135px;
+    text-align: center;
+    font-family: Roboto,sans-serif;
+    color: white;
+    font-size: 17px;
+}
+
+div#rodape {
+    position: relative;
+    background-color: rgba(000, 000, 000, 0.3);
+    background-size: cover;
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+div#risca {
+    width: 2px;
+    height: 170px;
+    background-color: white;
+    margin: 45px;
+    padding: 1px;
+    float: left;
+}
+
+div#infor {
+    width: 415px;
+    height: 170px;
+    background-color: transparent;
+    float: left;
+}
+
+#redeSoc {
+    width: 415px;
+    height: 170px;
+    float: left;
+}
+
+.redeIcon {
+    width: 100px;
+    cursor: pointer;
+    float: left;
+    padding: 15px;
+    margin-top: 22px;
+}
+
+#titleRede {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+p#titulo {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+p#info {
+    font-size: 17px;
+    color: white;
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    background: rgb(140,184,240);
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    border-radius: 40px;
+    background: rgb(140,184,240);
+}
