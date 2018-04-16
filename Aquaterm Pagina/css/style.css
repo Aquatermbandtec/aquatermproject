@@ -148,13 +148,12 @@ li a{
 
 .menu a:hover:not(.active){
 	color: white;
-	background-color: rgba(000, 000, 000, 0.3);
+	background-color: rgba(207, 229, 255);
 	transition: .5s ease-in-out;
 }
 
 p{
-	font-family: roboto,sans-serif;
-	font-style: bold;
+	font-family: Arial Narrow, sans-serif;
 	padding-bottom: 10px;
 	padding-top: 10px;
 
