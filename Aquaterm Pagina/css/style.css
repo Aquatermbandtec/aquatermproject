@@ -225,7 +225,7 @@ p{
     width: 25%;
     margin: 10px;
     float: left;
-    border-top: 15px solid #3f87bb1c;
+    border-top: 12px solid rgb(183, 226, 255);
     border-radius: 25px 25px 0px 0px;
 }
 .bloco img {
