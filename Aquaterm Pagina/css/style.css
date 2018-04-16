@@ -32,6 +32,7 @@ body{
 			  position: relative;
 			  margin: auto;
 			  margin-bottom: 2%;
+			  padding-top: 70px;
 			}
 
 			/* BOTÃO DE IR E VOLTAR <> */
@@ -112,7 +113,7 @@ body{
 }
 
 #menuUL{
-	position: relative;
+	position: fixed;
 	z-index: 99999999;
 	width: 100%;
 	list-style-type: none;
@@ -120,7 +121,7 @@ body{
 	padding: 0;
 	overflow: hidden;
 	background-color: white;
-	box-shadow: 0px 3px 15px #737373;
+	box-shadow: 0px 3px 15px #737373bf;
 }
 
 .loginIcon{
