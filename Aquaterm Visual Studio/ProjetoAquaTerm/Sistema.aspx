@@ -28,7 +28,9 @@
                 </ul>
                     
             </div>
+    
             <div id="blocos">
+                Bem vindo, <b><%=(string)Session["nomeUsuario"]%></b><br />
             <div id="bloco1"></div>
             <div id="bloco2"></div>
             </div>

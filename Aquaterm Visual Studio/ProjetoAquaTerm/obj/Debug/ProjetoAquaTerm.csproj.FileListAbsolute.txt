@@ -101,3 +101,37 @@ D:\BandTec\ProjetoAquaTerm\ProjetoAquaTerm\ProjetoAquaTerm\obj\Debug\ProjetoAqua
 D:\BandTec\ProjetoAquaTerm\ProjetoAquaTerm\ProjetoAquaTerm\obj\Debug\ProjetoAquaTerm.csproj.CoreCompileInputs.cache
 D:\BandTec\ProjetoAquaTerm\ProjetoAquaTerm\ProjetoAquaTerm\obj\Debug\ProjetoAquaTerm.dll
 D:\BandTec\ProjetoAquaTerm\ProjetoAquaTerm\ProjetoAquaTerm\obj\Debug\ProjetoAquaTerm.pdb
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\roslyn\csc.exe
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\roslyn\csc.exe.config
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\roslyn\csc.rsp
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\roslyn\csi.exe
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\roslyn\csi.rsp
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\roslyn\System.AppContext.dll
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\roslyn\vbc.exe
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\roslyn\vbc.exe.config
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\roslyn\vbc.rsp
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\roslyn\VBCSCompiler.exe
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\ProjetoAquaTerm.dll.config
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\ProjetoAquaTerm.dll
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\ProjetoAquaTerm.pdb
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\obj\Debug\ProjetoAquaTerm.csprojResolveAssemblyReference.cache
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\obj\Debug\ProjetoAquaTerm.dll
+C:\Users\aluno\Documents\aquatermproject\Aquaterm Visual Studio\ProjetoAquaTerm\obj\Debug\ProjetoAquaTerm.pdb
