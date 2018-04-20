@@ -30,7 +30,7 @@
             </div>
     
             <div id="blocos">
-                Bem vindo, <b><%=(string)Session["nomeUsuario"]%></b><br />
+            <div id="blocobemvindo"> Bem vindo, <b><%=(string)Session["nomeUsuario"]%></b>!</div>   
             <div id="bloco1"></div>
             <div id="bloco2"></div>
             </div>

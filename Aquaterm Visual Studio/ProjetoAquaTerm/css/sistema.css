@@ -125,6 +125,17 @@ div#blocos {
     flex-wrap: wrap;
 }
 
+div#blocobemvindo {
+	float: left;
+	font-family: sans-serif;
+	font-size: 25px;
+	width: 100%;
+	margin-left: 40%;
+	
+	
+	
+	
+}
 
 div#bloco1 {
     margin-top: 400px;
