@@ -79,11 +79,10 @@ O projeto AquaTermº oferece um gerenciador de temperatura para aquários, com o
 			<div id="casa">	
 				<h1>CASA</h1>
 				<ul> 
-				  <li class="listPlanos"> <img src="img/orange.png"/> Lorem ipsum Amet consectetuer Amet consectetuer</li> <br>
-				  <li class="listPlanos"> <img src="img/orange.png"/> Lorem ipsum Amet consectetuer Amet consectetuer</li> <br> 
-				  <li class="listPlanos"> <img src="img/orange.png"/> Lorem ipsum Amet consectetuer Amet consectetuer</li> <br> 
-				  <li class="listPlanos"> <img src="img/orange.png"/> Lorem ipsum Amet consectetuer Amet consectetuer</li> <br> 
-				  <li class="listPlanos"> <img src="img/orange.png"/> Lorem ipsum Amet consectetuer Amet consectetuer</li> <br> 
+				  <li class="listPlanos"> <img src="img/OKicon.png"/> Painel de temperatura</li> <br>
+				  <li class="listPlanos"> <img src="img/OKicon.png"/> Gráficos de gerenciamento</li> <br> 
+				  <li class="listPlanos"> <img src="img/OKicon.png"/> Caixa de anotações</li> <br> 
+				  <li class="listPlanos"> <img src="img/OKicon.png"/> Nome/Foto dos peixes</li> <br> 
 				</ul>
 				
 				<div class="adquirir"> <a href="contato.html">QUERO ESSE!</a></div>
@@ -93,11 +92,11 @@ O projeto AquaTermº oferece um gerenciador de temperatura para aquários, com o
 			<div id="loja">
 				<h1>LOJA</h1>
 				<ul> 
-				  <li class="listPlanos"> <img src="img/orange.png"/> Lorem ipsum Amet consectetuer Amet consectetuer</li> <br>
-				  <li class="listPlanos"> <img src="img/orange.png"/> Lorem ipsum Amet consectetuer Amet consectetuer</li> <br> 
-				  <li class="listPlanos"> <img src="img/orange.png"/> Lorem ipsum Amet consectetuer Amet consectetuer</li> <br> 
-				  <li class="listPlanos"> <img src="img/orange.png"/> Lorem ipsum Amet consectetuer Amet consectetuer</li> <br> 
-				  <li class="listPlanos"> <img src="img/orange.png"/> Lorem ipsum Amet consectetuer Amet consectetuer</li> <br> 
+				  <li class="listPlanos"> <img src="img/OKicon.png"/> Painel de temperatura</li> <br>
+				  <li class="listPlanos"> <img src="img/OKicon.png"/> Gráficos de gerenciamento</li> <br> 
+				  <li class="listPlanos"> <img src="img/OKicon.png"/> Controle de luminosidade</li> <br> 
+				  <li class="listPlanos"> <img src="img/OKicon.png"/> Especificação de temperatura ideal</li> <br> 
+				  <li class="listPlanos"> <img src="img/OKicon.png"/> Campo para anotações</li> <br> 
 				</ul>
 				
 				<div class="adquirir"> <a href="contato.html">QUERO ESSE!</a></div>
