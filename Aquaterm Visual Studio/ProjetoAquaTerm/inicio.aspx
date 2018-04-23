@@ -18,7 +18,7 @@
 			
 			<li class="menu"><a href="Manual.html"><p>MANUAL</p></a></li>
 			<li class="menu"><a href="CONTATO.html"><p>CONTATO</p></a></li>
-			<li class="menu"><a href="sobreNos.html"><p>SOBRE NÓS</p></a></li>
+			<li class="menu"><a href="sobreNos.aspx"><p>SOBRE NÓS</p></a></li>
 
 		</ul>
 		<!--FIM DO MENU-->

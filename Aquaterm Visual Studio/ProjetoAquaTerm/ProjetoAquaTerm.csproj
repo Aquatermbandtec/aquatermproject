@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\sistema.css" />
+    <Content Include="css\sobreNos.css" />
     <Content Include="css\style.css" />
     <Content Include="img\aquarioWall.jpg" />
     <Content Include="img\arduino.jpg" />
@@ -75,10 +76,11 @@
     <Content Include="img\email.png" />
     <Content Include="img\face.png" />
     <Content Include="img\github.png" />
-    <Content Include="img\icone.jpg" />
     <Content Include="img\image2.jpg" />
     <Content Include="img\insta.png" />
     <Content Include="img\integrante1.jpg" />
+    <Content Include="img\integrante2.jpg" />
+    <Content Include="img\integrante3.jpg" />
     <Content Include="img\integrante4.jpeg" />
     <Content Include="img\integrante5.jpg" />
     <Content Include="img\login.png" />
@@ -116,6 +118,7 @@
     <Content Include="Login.aspx" />
     <Content Include="css\login.css" />
     <Content Include="Sistema.aspx" />
+    <Content Include="sobreNos.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -149,6 +152,13 @@
     </Compile>
     <Compile Include="Sistema.aspx.designer.cs">
       <DependentUpon>Sistema.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sobreNos.aspx.cs">
+      <DependentUpon>sobreNos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sobreNos.aspx.designer.cs">
+      <DependentUpon>sobreNos.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

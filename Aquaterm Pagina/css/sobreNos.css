@@ -32,7 +32,7 @@ body{
 	margin-left: 110px;
 }
 
-ul{
+#menuID {
 	z-index: 99999999;
 	position: fixed;
 	top:0px;
@@ -41,7 +41,7 @@ ul{
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color: #848484;
+	background-color: white;
 	box-shadow: 0px 5px 25px #737373bf;
 }
 
@@ -60,14 +60,12 @@ ul{
 	margin-right:150px;
 }
 
-li a{
-	float: right;
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 15px 15px;
-	padding-top: 15px;
-	text-decoration: none;
+#menuID li a{
+    float: right;
+    color: #737373;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
 
 }
 
@@ -78,7 +76,6 @@ li a{
 
 p{
 	font-family: Arial Narrow, sans-serif;
-	font-weight: 600;
 	padding-bottom: 10px;
 	padding-top: 10px;
 
@@ -95,13 +92,13 @@ p{
 
 /*INICIO CSS DO SOBRE NOS*/
 .riscaHori {
-    width: 70%;
+	width: 74%;
     opacity: 0.5;
-    margin-bottom: 15px;
-    margin-top: 70px;
-    margin-left: 15%;
+    margin-bottom: 5px;
+    margin-top: 45px;
+    margin-left: 13%;
     padding: 1px;
-	padding-top: 50px;
+    padding-top: 50px;
     font-size: 30px;
     border-bottom: 1px solid #737373;
 }
@@ -220,8 +217,10 @@ div#bloco3 img{
 
 /*INICIO CSS INTEGRANTES*/
 div#integrantes{
+	margin-top: 70px;
+	margin-bottom: 70px;
 	width: 100%;
-	background-color: #60abb3;
+	background-color: #7ea8dc;
 	min-height: 365px;
 	position: relative;
 	display: flex;
@@ -267,7 +266,9 @@ div#integrante2{
 	position: relative;
 	width: 150px;
 	height: 150px;
-	background-color: white;
+	background-image: url(../img/integrante2.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
 	margin: 10px;
 	padding: 20px;
 	border-radius: 50%;
@@ -286,11 +287,12 @@ div#integrante3{
 	position: relative;
 	width: 150px;
 	height: 150px;
-	background-color: white;
+	background-image: url(../img/integrante3.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
 	margin: 10px;
 	padding: 20px;
 	border-radius: 50%;
-	
 }
 
 p#int3{
@@ -347,7 +349,29 @@ p#int5{
 }
 /*FIM CSS INTEGRANTES*/
 
+#conteudoP {
+    height: 190px;
+    background-color: rgba(255, 138, 0, 0.21);
+    width: 78%;
+    margin: auto;
+}
 
+#conteudoP p{
+	font-size: 20px;
+	margin-left: 11%;
+	margin-right: 11%;
+	font-family: Helvetica;
+	color: #505050;
+}
+
+#conteudoP h1{
+	padding-top: 2%;
+	padding-bottom: 1%;
+	font-family: Helvetica;
+	font-weight: lighter;
+	color: #505050;
+	text-align: center;
+}
 
 /*INICIO DO RODAPE*/
 	div#rodape{
