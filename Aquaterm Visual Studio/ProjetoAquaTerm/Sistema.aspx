@@ -1,4 +1,4 @@
-﻿ <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Sistema.aspx.cs" Inherits="ProjetoAquaTerm.Sistema" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Sistema.aspx.cs" Inherits="ProjetoAquaTerm.Sistema" %>
 
 <!DOCTYPE html>
 
@@ -30,7 +30,7 @@
             </div>
     
             <div id="blocos">
-             Bem vindo, <b><%=(string)Session["nomeUsuario"]%></b>!  
+            <div id="blocobemvindo"> Bem vindo, <b><%=(string)Session["nomeUsuario"]%></b>!</div>   
             <div id="bloco1"></div>
             <div id="bloco2"></div>
             </div>
