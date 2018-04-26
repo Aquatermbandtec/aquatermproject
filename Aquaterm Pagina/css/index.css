@@ -112,7 +112,7 @@ input[type=submit] {
 	
 	input[type=submit]:hover { 
 		transition: all 0.3s;
-		background: rgb(114,50,125); 
+		background: #bebebe; 
 		color: white;
 	}
 	
