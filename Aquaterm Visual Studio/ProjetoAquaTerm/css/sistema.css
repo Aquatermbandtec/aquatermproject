@@ -126,13 +126,12 @@ div#blocos {
 }
 
 div#blocobemvindo {
-	position: absolute;
+	position: relative;
 	font-family: sans-serif;
 	font-size: 25px;
 	width: 100%;
 	margin-left: 40%;
 	margin-right: 40%;
-	padding-bottom: 50%;
 	justify-content: center;
 	
 }
