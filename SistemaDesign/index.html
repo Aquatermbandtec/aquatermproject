@@ -8,52 +8,54 @@
 <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
 </head>
 <body>
-
-
-
-<div class="menu">
-
-<div class="risquinho">	
-	<p id="voltar" onclick="myVoltar()">&#9776;</p>
-	<p id ="ir" onclick="myIr()">&#9776;</p> 
-						
-</div>
-
-</div>
-<div id="menuLateral">
-	
-	<div class="menuUsuario">
-	<div class="fotoUsuario"></div>
-	<p class="nomeUsuario">Usuário</p>
+	<div class="menu">
+		<div class="risquinho">	
+			<p id="voltar" onclick="myVoltar()">&#9776;</p>
+			<p id ="ir" onclick="myIr()">&#9776;</p> 
+								
+		</div>
 	</div>
 
+	<div id="menuLateral">	
+		<div class="menuUsuario">
+		<div class="fotoUsuario"></div>
+		<p class="nomeUsuario">Usuário</p>
+		</div>
 
-	<ul class="ulMenu">
-		
-		<li class="menuLi">Relatórios</li>
+		<ul class="ulMenu">
+			
+			<li class="menuLi">Relatórios</li>
+			</ul>
+
+		<ul class="ulSair">
+			<li class="sairLi">Sair</li>	
 		</ul>
+	</div>
 
-	<ul class="ulSair">
-		<li class="sairLi">Sair</li>	
-	</ul>
+	<div class="conteudo">	
+		<div class="temperatura">
+			<div id="redondoTemp">
+					<img src="aquario.png" />
+					<label id="temp">0º</label>
+			</div>
+		</div>
 
-</div>
-
-<div class="conteudo">	
-
-<div class="temperatura">
-	<div id="redondoTemp">
-            <img src="aquario.png" />
-            <label id="temp">0º</label>
-    </div>
-</div>
-
-<div class="grafico">
-	<canvas id="chart"></canvas>
-</div>
-
-
-</div>
+		<div class="grafico">
+			<canvas id="chart"></canvas>
+		</div>
+		
+		<div class="cxTexto">
+			<div id="textoCss">
+			<input type="text" placeholder="         Faça suas anotações aqui :)" />				
+			</div>
+			
+			<div id="botTexto">
+			<input type="submit" name="Salvar" value="SALVAR" onclick="#">
+			</div>
+		</div>
+	</div>
+	
+	
 
 
 
