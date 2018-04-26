@@ -1,0 +1,217 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #dadfe8;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudo {
+    width: 100%;
+    height: calc(100% - 70px);
+    background-color: transparent;
+    position: absolute;
+    display: flex;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.temperatura {
+    margin-top: 400px;
+    margin-left: 400px;
+    background-color: #fff;
+    width: 250px;
+    height: 300px;
+    margin: 10px;
+    padding: 20px;
+    float: left;
+    border-radius: 10px;
+}
+
+.grafico {
+    margin-top: 400px;
+    margin-left: 400px;
+    background-color: #fff;
+    width: 500px;
+    height: 400px;
+    margin: 10px;
+    padding: 20px;
+    float: left;
+    border-radius: 10px;
+}
+
+
+
+
+.menu {
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    box-shadow: 2px 2px rgba(136, 136, 136, 0.2);
+}
+
+#ir {
+    color: black;
+    font-family: century gothic;
+    font-size: 25px;
+    cursor: pointer;
+    position: absolute;
+    margin-left: 13px;
+    margin-top: 7px;
+}
+
+
+
+.risquinho {
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 20px;
+    background-color: transparent;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+    .risquinho:hover {
+        color: blue;
+        transition: all 0.3s;
+        background-color: #dadfe8;
+        border-radius: 50px;
+    }
+
+    .risquinho p:hover {
+        color: blue;
+    }
+
+#menuLateral {
+    left: 0px;
+    position: absolute;
+    width: 0px;
+    height: calc(100% - 70px);
+    background-color: white;
+    transition: all 0.3s;
+    overflow: hidden;
+    z-index: 9 !important;
+    box-shadow: 2px 2px rgba(136, 136, 136, 0.2);
+}
+
+#voltar {
+    color: rgb(68, 134, 249);
+    font-family: century gothic;
+    font-size: 25px;
+    cursor: pointer;
+    position: absolute;
+    margin-left: 13px;
+    margin-top: 7px;
+}
+
+.ulSair {
+    position: absolute;
+    bottom: 0px;
+    cursor: pointer;
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    display: initial;
+    background-color: rgb(68,134,249);
+}
+
+.menuLi {
+    cursor: pointer;
+    font-family: century gothic;
+    font-size: 17px;
+    display: block;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.sairLi {
+    cursor: pointer;
+    font-family: century gothic;
+    font-size: 17px;
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    padding-left: 75px;
+    text-decoration: none;
+    overflow: hidden;
+    font-style: bold;
+}
+
+.menuLi:hover {
+    transition: all 0.5s;
+    background-color: rgba(68, 134, 249,0.2);
+    color: rgb(68, 134, 249);
+}
+
+.ulSair:hover {
+    transition: all 0.5s;
+    background-color: rgb(56, 128, 259)
+}
+
+.menuUsuario {
+    width: 100%;
+    height: 60px;
+    background-color: transparent;
+}
+
+.nomeUsuario {
+    font-family: century gothic;
+    font-size: 16px;
+    position: absolute;
+    padding-left: 90px;
+    margin-top: 20px;
+    color: black;
+}
+
+.fotoUsuario {
+    height: 60px;
+    position: absolute;
+    background-image: url(/img/user.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 60px;
+    border-radius: 50px;
+    margin-left: 10px;
+}
+
+
+#redondoTemp {
+    margin-left: 45px;
+    width: 160px;
+    height: 160px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 40px;
+    font-family: 'Century Gothic';
+}
+
+    #redondoTemp img {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+    }
+.pMedia {
+    font-family:'Century Gothic';
+    font-size:15px;
+    position:absolute;
+    margin-top:30px;
+    margin-left:10px;
+}
+
