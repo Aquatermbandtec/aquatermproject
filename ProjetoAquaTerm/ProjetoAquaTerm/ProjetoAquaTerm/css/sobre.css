@@ -29,15 +29,17 @@ body {
     margin-left: 110px;
 }
 
-ul {
+#menuID {
     z-index: 99999999;
+    position: fixed;
+    top: 0px;
     width: 100%;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #848484;
-    box-shadow: 0px 5px 25px #73737359;
+    background-color: white;
+    box-shadow: 0px 5px 25px #737373bf;
 }
 
 .loginIcon {
@@ -55,23 +57,22 @@ ul {
     margin-right: 150px;
 }
 
-li a {
+#menuID li a {
     float: right;
-    display: block;
-    color: white;
+    color: #737373;
     text-align: center;
     padding: 15px 15px;
-    padding-top: 15px;
     text-decoration: none;
 }
 
 .menu a:hover:not(.active) {
-    color: white;
-    background-color: rgba(000, 000, 000, 0.3);
+    color: rgb(139,183,240);
+    transition: .5s ease-in-out;
+    background-color: rgba(207, 229, 255,0.9);
 }
 
 p {
-    font-family: roboto,sans-serif;
+    font-family: Arial Narrow, sans-serif;
     padding-bottom: 10px;
     padding-top: 10px;
 }
@@ -85,12 +86,13 @@ p {
 
 /*INICIO CSS DO SOBRE NOS*/
 .riscaHori {
-    width: 70%;
+    width: 74%;
     opacity: 0.5;
-    margin-bottom: 15px;
-    margin-top: 70px;
-    margin-left: 15%;
+    margin-bottom: 5px;
+    margin-top: 45px;
+    margin-left: 13%;
     padding: 1px;
+    padding-top: 50px;
     font-size: 30px;
     border-bottom: 1px solid #737373;
 }
@@ -100,7 +102,8 @@ div#blocos {
     background-color: white;
     background-size: cover;
     width: 100%;
-    min-height: 100%;
+    height: 450px;
+    /*min-height: 100%;*/
     display: flex;
     justify-content: center;
     --align-items: center;
@@ -204,8 +207,10 @@ div#bloco3 img {
 
 /*INICIO CSS INTEGRANTES*/
 div#integrantes {
+    margin-top: 70px;
+    margin-bottom: 70px;
     width: 100%;
-    background-color: rgba(000, 000, 000, 0.3);
+    background-color: #7ea8dc;
     min-height: 365px;
     position: relative;
     display: flex;
@@ -213,6 +218,7 @@ div#integrantes {
     align-items: center;
     flex-wrap: wrap;
     padding: 20px;
+    padding-bottom: 75px;
 }
 
 p.inte {
@@ -228,7 +234,7 @@ div#integrante1 {
     position: relative;
     width: 150px;
     height: 150px;
-    background-image: url(../img/integrante11.jpg);
+    background-image: url(../img/integrante1.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     margin: 10px;
@@ -248,7 +254,9 @@ div#integrante2 {
     position: relative;
     width: 150px;
     height: 150px;
-    background-color: white;
+    background-image: url(../img/integrante2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
     margin: 10px;
     padding: 20px;
     border-radius: 50%;
@@ -266,7 +274,9 @@ div#integrante3 {
     position: relative;
     width: 150px;
     height: 150px;
-    background-color: white;
+    background-image: url(../img/integrante3.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
     margin: 10px;
     padding: 20px;
     border-radius: 50%;
@@ -322,7 +332,29 @@ p#int5 {
 }
 /*FIM CSS INTEGRANTES*/
 
+#conteudoP {
+    height: 190px;
+    background-color: rgba(255, 138, 0, 0.21);
+    width: 78%;
+    margin: auto;
+}
 
+    #conteudoP p {
+        font-size: 20px;
+        margin-left: 11%;
+        margin-right: 11%;
+        font-family: Helvetica;
+        color: #505050;
+    }
+
+    #conteudoP h1 {
+        padding-top: 2%;
+        padding-bottom: 1%;
+        font-family: Helvetica;
+        font-weight: lighter;
+        color: #505050;
+        text-align: center;
+    }
 
 /*INICIO DO RODAPE*/
 div#rodape {

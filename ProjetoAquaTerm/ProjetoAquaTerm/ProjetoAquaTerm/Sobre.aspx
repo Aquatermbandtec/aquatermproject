@@ -9,20 +9,38 @@
     <link rel="stylesheet" type="text/css" href="css/sobre.css" />
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
-            <ul>
-			<a href="Inicio.aspx"><img class="logo" src="img/peixinho2.png"></a>
+    <!-- INICIO DO MENU -->
+		<ul id="menuID">
+			<a href="Inicio.aspx"><img class="logo" src="img/logo.png"></a>
 			<li class="logar"><a href="Login.aspx" target="blank" title="Entrar no sistema"><img class="loginIcon" src="img/login.png" a href="#"></a>
 			
 			</li>
 			
-			<!--<li class="menu"><a href="#"><p>MENU 1</p></a></li>-->
+			<!--<li class="menu"><a href="Manual.html"><p>MANUAL</p></a></li>-->
 			<li class="menu"><a href="Contato.aspx"><p>CONTATO</p></a></li>
 			<li class="menu"><a href="Sobre.aspx"><p>SOBRE NÓS</p></a></li>
-			<!--<li class="menu"><a href="#"><p>MENU 4</p></a></li>-->
+			
 		</ul>
 		<!-- FIM DO MENU -->	
+		
+		<!--INICIO INTEGRANTES-->		
+		<div id="integrantes"><p class="inte">INTEGRANTES</p>
+
+			<div id= "integrante1"><p id="int1"> Thiago Lima</p></div>
+			<div id= "integrante2"><p id="int2"> Giuliana Miniguiti</p></div>
+			<div id= "integrante3"><p id="int3"> Caio Massayuki</p></div>
+			<div id= "integrante4"><p id="int4"> Gustavo Batistuti</p></div>
+			<div id= "integrante5"><p id="int5"> Andressa Souza</p></div>
+
+		</div>
+		<!--FIM INTEGRANTES-->
+		
+		<div id="conteudoP"> 
+			<h1>O QUE NÓS FAZEMOS ?</h1>
+			<p>
+O projeto AquaTermº oferece um gerenciador de temperatura para aquários, com objetivo de facilitar o controle e visualização do usuário, aumentando a expectativa de vida dos peixes e inovando com criatividade e tecnologia IoT.
+			</p>
+		</div>
 		
 		<!--INICIO SOBRE NOS-->	
 		<div class="riscaHori">SOBRE NÓS</div>
@@ -41,23 +59,13 @@
 
 			<div id= "bloco3"><img src="img/metodologia.png"">
 			<h1>Valores</h1>
-			<p id="ideia">Preocupação, Qualidade e Tecnologia é a motivação para criação da solução IoT nomeDoProjetoAqui </p>
+			<p id="ideia">Preocupação, Qualidade e Tecnologia é a motivação para criação da solução IoT AquaTermº </p>
 			</div>
 		
 		</div>
 		<!--FIM SOBRE NOS-->
 
-		<!--INICIO INTEGRANTES-->		
-		<div id="integrantes"><p class="inte">INTEGRANTES</p>
 
-			<div id= "integrante1"><p id="int1"> Thiago Lima</p></div>
-			<div id= "integrante2"><p id="int2"> Giuliana França</p></div>
-			<div id= "integrante3"><p id="int3"> Caio Massayuki</p></div>
-			<div id= "integrante4"><p id="int4"> Gustavo Batistuti</p></div>
-			<div id= "integrante5"><p id="int5"> Alessandra</p></div>
-
-		</div>
-		<!--FIM INTEGRANTES-->
 		
 		<div id="rodape">
 			<div id= "infor">
@@ -65,7 +73,7 @@
 				<p id="titulo">ENDEREÇO E TELEFONE</p>
 				<p id="info">
 					Rua Haddock Lobo, 595 - Cerqueira César, São Paulo - SP, 01310-300<br><br>
-					Telefone: (11) 1111-1111
+					Telefone: 4567-8977
 				</p>
 			</div>
 			
@@ -80,9 +88,5 @@
 				<img class="redeIcon" src="img/github.png" a href="#">
 			</div>			
 		</div>
-
-
-        </div>
-    </form>
 </body>
 </html>

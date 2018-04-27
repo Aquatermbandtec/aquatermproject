@@ -12,14 +12,12 @@
     <!-- INICIO DO MENU -->
 		<ul>
 			<a href="Inicio.aspx"><img class="logo" src="img/peixinho2.png"></a>
-			<li class="logar"> <a href="Login.aspx" target="blank" title="Entrar no sistema"><img class="loginIcon" src="img/login.png" a href="#"></a>
+			<li class="logar"> <a href="Login.aspx" target="blank" title="Entrar no sistema"><img class="loginIcon" src="img/loginB.png" a href="#"></a>
 			</li>
 			
 			
 			<li class="menu"><a href="Contato.aspx"><p>CONTATO</p></a></li>
             <li class="menu"><a href="Sobre.aspx"><p>SOBRE NÓS</p></a></li>
-			<!--<li class="menu"><a href="#"><p>MENU 3</p></a></li>-->
-			<!--<li class="menu"><a href="#"><p>MENU 4</p></a></li>-->
 		</ul>
 		<!-- FIM DO MENU -->	
 		
@@ -31,7 +29,7 @@
 			<div class="riscaHori">CONTATO</div>
 			<p id="texto">Está precisando de um help? Entre em contato com a gente que te ajudaremos!
 			<br><br>
-			Deixe aqui embaixo seus dados e a mensagem que deseja enviar que responderemos assim que possível :)
+			Deixe aqui embaixo seus dados e a mensagem que deseja enviar que responderemos assim que possível
 			</p>
 			
 			<form id="formContato" runat="server" name="Contato">
@@ -40,12 +38,12 @@
                     <asp:TextBox ID="txtNomeUsuario" runat="server" placeholder="Seu Nome"></asp:TextBox>
 				</div>
 				<div class="divform">
-					<label for="email">E-mail:</label>
-                    <asp:TextBox ID="txtEmailUsuario" runat="server" TextMode="Email" placeholder="Seu E-mail"></asp:TextBox>
+					<label for="email">E-Mail:</label>
+                    <asp:TextBox ID="txtEmailUsuario" runat="server" TextMode="Email" placeholder="Seu E-mail" ></asp:TextBox>
 				</div>
 				<div class="divform">
 					<label for="msg">Mensagem:</label>
-                    <asp:TextBox ID="TxtAreaMensagem" runat="server" TextMode="MultiLine" placeholder="Sua Mensagem" CssClass="TxtAreaMensagem"></asp:TextBox>
+                    <asp:TextBox ID="TxtAreaMensagem" runat="server" TextMode="MultiLine" placeholder="Sua Mensagem" CssClass="txtAreaMensagem"></asp:TextBox>
 				</div>
 				<div class="button">
                     <asp:Button ID="btnEnviar" runat="server" Text="Enviar Sua Mensagem" CssClass="btnEnviar" OnClick="btnEnviar_Click" />
@@ -59,7 +57,7 @@
 				<p id="titulo">ENDEREÇO E TELEFONE</p>
 				<p id="info">
 					Rua Haddock Lobo, 595 - Cerqueira César, São Paulo - SP, 01310-300<br><br>
-					Telefone: (11) 1111-1111
+					Telefone: 4567-8977
 				</p>
 			</div>
 			

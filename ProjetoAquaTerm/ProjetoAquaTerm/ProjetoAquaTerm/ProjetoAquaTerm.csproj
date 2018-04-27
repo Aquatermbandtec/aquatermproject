@@ -74,6 +74,8 @@
     <Content Include="img\github.png" />
     <Content Include="img\insta.png" />
     <Content Include="img\integrante11.jpg" />
+    <Content Include="img\integrante2.jpg" />
+    <Content Include="img\integrante3.jpg" />
     <Content Include="img\integrante4.jpeg" />
     <Content Include="img\integrante5.jpg" />
     <Content Include="img\login.png" />
@@ -85,6 +87,7 @@
     <Content Include="img\nome.png" />
     <Content Include="img\peixinho2.png" />
     <Content Include="img\peixinho22.png" />
+    <Content Include="img\peixinhoIcon.png" />
     <Content Include="img\projeto.png" />
     <Content Include="img\qm.png" />
     <Content Include="css\sistema.css" />
@@ -94,6 +97,7 @@
     <Content Include="css\style.css" />
     <Content Include="img\twitter.png" />
     <Content Include="img\icone.jpg" />
+    <Content Include="img\user.png" />
     <Content Include="index.html" />
     <Content Include="Inicio.aspx" />
     <Content Include="packages.config" />

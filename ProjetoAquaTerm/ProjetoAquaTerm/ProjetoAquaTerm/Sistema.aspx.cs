@@ -12,6 +12,10 @@ namespace ProjetoAquaTerm
         protected void Page_Load(object sender, EventArgs e)
         {
             lblUsuario.Text = (string)Session["nomeUsuario"];
+
+            if (lblUsuario.Text == "") {
+                Response.Redirect("Login.aspx");
+            }
         }
     }
 }
