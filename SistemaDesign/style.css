@@ -10,53 +10,79 @@ body {
     align-items: center;
 }
 
-.conteudo {
+#bemVindo h1{
+	text-align: center;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-family: Helvetica;
+}
+
+#linha1{
+	border-radius: 15px 15px 0px 0px;
+    background-color: #8c8c8c;
     width: 100%;
-    height: calc(100% - 70px);
+    height: 50px;
+}
+#linha1 p{
+	color: white;
+    font-size: 25px;
+    font-family: Helvetica;
+	padding: 10px;
+}
+
+#linha1 img{
+    width: 40px;
+    float: right;
+    margin: 5px;
+}
+
+
+.conteudo {
+    width: 90%;
     background-color: transparent;
-    position: absolute;
-    display: flex;
     background-size: cover;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    float: left;
+    margin-bottom: 50px;
+    margin-left: 60px;
 }
 
 .temperatura {
-    margin-top: 400px;
-    margin-left: 400px;
     background-color: #fff;
     width: 250px;
-    height: 395px;
-    margin: 10px;
+    height: 400px;
     padding: 20px;
     float: left;
-    border-radius: 10px;
 }
 
 .grafico {
-    margin-top: 400px;
-    margin-left: 400px;
     background-color: #fff;
-    width: 500px;
+    width: 475px;
     height: 400px;
-    margin: 10px;
+    margin-left: 10px;
     padding: 20px;
     float: left;
-    border-radius: 10px;
+}
+
+.medias {
+    background-color: #fff;
+    width: 271px;
+    height: 400px;
+    margin-left: 10px;
+    padding: 20px;
+    float: left;
 }
 
 /*INICIO CSS CAIXA DE TEXTO*/
 .cxTexto {
-    margin-top: 400px;
-    margin-left: 400px;
     background-color: #fff;
-    width: 250px;
+    width: 295px;
     height: 400px;
-    margin: 10px;
-    padding: 20px;
+    padding-bottom: 50px;
     float: left;
-    border-radius: 10px;
+	border-radius: 15px 15px 0px 0px;
 }
 #textoCss{
     padding: 5px;
@@ -78,12 +104,20 @@ body {
     border: 0 none;
     cursor: pointer;
     border-radius: 5px;
-	margin-left: 70px;
-	margin-top: 25px;
+    margin-left: 30%;
+    margin-top: 20px;
 }
 
 /*FIM CSS CAIXA DE TEXTO*/
 
+#peixe01{	
+    height: 450px;
+    width: 830px;
+    float: inherit;
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 15px 15px 0px 0px;
+}
 .menu {
     width: 100%;
     height: 70px;

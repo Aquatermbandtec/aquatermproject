@@ -15,7 +15,8 @@
 								
 		</div>
 	</div>
-
+	
+	<!--inicio menu-->
 	<div id="menuLateral">	
 		<div class="menuUsuario">
 		<div class="fotoUsuario"></div>
@@ -31,8 +32,16 @@
 			<li class="sairLi">Sair</li>	
 		</ul>
 	</div>
+	<!--fim menu-->
+	
+	<div id="bemVindo">
+		<h1>Bem vindo, Usuário da Silva</h1>
+	</div>
 
 	<div class="conteudo">	
+
+		<div id="linha1">  <img src="analytic.png"> <p>Seu histórico de temperatura</p></div>
+		
 		<div class="temperatura">
 			<div id="redondoTemp">
 					<img src="aquario.png" />
@@ -44,7 +53,15 @@
 			<canvas id="chart"></canvas>
 		</div>
 		
+		<div class="medias">
+			<p> 6 medias de temperatura, obs: aquele que a Andressa fez</p>
+		</div>	
+		
+	</div>
+	
+	<div class="conteudo">		
 		<div class="cxTexto">
+			<div id="linha1"> <img src="listIcon.png"> <p>Anotações</p> </div>
 			<div id="textoCss">
 			<input type="text" placeholder="         Faça suas anotações aqui :)" />				
 			</div>
@@ -53,8 +70,11 @@
 			<input type="submit" name="Salvar" value="SALVAR" onclick="#">
 			</div>
 		</div>
+		
+		<div id="peixe01">
+			<div id="linha1"> <img src="listIcon.png"> <p>Painel a definir</p> </div>
+		</div>
 	</div>
-	
 	
 
 
@@ -63,15 +83,17 @@
 
 //Abrir Scrípt "Ação abrir e fechar menu"
 function myIr() {
-    document.getElementById("menuLateral").style.transition = "all 0.3s";
-    document.getElementById("menuLateral").style.width = "190px";
+    document.getElementById("menuLateral").style.transition = "all 0.5s";
+    document.getElementById("menuLateral").style.width = "200px";
 	document.getElementById("ir").style.display = "none";
+	document.getElementById("conteudo").style.marginLeft = "190px";
 }
 
 function myVoltar(){
 	document.getElementById("ir").style.display = "initial";	
-	document.getElementById("menuLateral").style.transition = "all 0.3s";
+	document.getElementById("menuLateral").style.transition = "all 0.5s";
     document.getElementById("menuLateral").style.width = "0px";
+	document.getElementById("conteudo").style.marginLeft = "0px";
 }
 //Fechar Scrípt "Ação abrir e fechar menu"
 
