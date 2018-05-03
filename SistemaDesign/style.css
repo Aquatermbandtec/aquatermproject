@@ -107,6 +107,7 @@ body {
     padding-bottom: 50px;
     float: left;
 	border-radius: 15px 15px 0px 0px;
+	margin-bottom: 60px;
 }
 #textoCss{
     padding: 5px;
@@ -134,13 +135,29 @@ body {
 
 /*FIM CSS CAIXA DE TEXTO*/
 
-#peixe01{	
+#peixes{	
     height: 450px;
     width: 830px;
     float: inherit;
     margin-left: 10px;
     background-color: white;
     border-radius: 15px 15px 0px 0px;
+	margin-bottom: 60px;
+}
+
+#peixe01{
+	width: 30%;
+    height: 83%;
+    background-color: #daeff3;
+    display: inline-block;
+    margin: 12px;
+	
+}
+#peixe01 img{
+	margin-top: 5%;
+	margin-left: 20%;
+	width: 60%;
+	border-radius: 100%;
 }
 .menu {
 	position: fixed;
@@ -152,10 +169,12 @@ body {
     box-shadow: 2px 2px rgba(136, 136, 136, 0.2);
 }
 
-#bell img{
-    margin: 5px;
-    width: 60px;
-    float: right
+#logo{
+	float: right;
+}
+#logo img{
+	padding: 10px;
+    width: 210px;
 }
 
 #ir {
@@ -325,5 +344,18 @@ body {
     position:absolute;
     margin-top:30px;
     margin-left:10px;
+}
+
+
+#bell{
+    position: fixed;
+    margin-top: 35%;
+    margin-left: 93%;
+}
+
+#bell img{
+    margin: 5px;
+    width: 60px;
+    float: right
 }
 
