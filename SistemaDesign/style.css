@@ -12,7 +12,7 @@ body {
 
 #bemVindo h1{
 	text-align: center;
-    margin-top: 50px;
+    margin-top: 80px;
     margin-bottom: 25px;
     font-family: Helvetica;
 }
@@ -36,20 +36,21 @@ body {
 }
 
 
-.conteudo {
-    width: 90%;
+#conteudo {
+    width: 100%;
+    height: calc(100% - 70px);
     background-color: transparent;
+    position: relative;
+    display: flex;
     background-size: cover;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    float: left;
-    margin-bottom: 50px;
-    margin-left: 60px;
 }
 
 #tempEgrafico{
-	width: 70%;
+	margin-bottom: 50px;
+	width: 59%;
 	float: left;
 }
 .temperatura {
@@ -81,7 +82,8 @@ body {
     float: left;
 }
 
-.medias {
+.medias {	
+	margin-bottom: 50px;
     background-color: #fff;
     width: 330px;
     height: 490px;
@@ -141,7 +143,10 @@ body {
     border-radius: 15px 15px 0px 0px;
 }
 .menu {
+	position: fixed;
+	z-index: 9 !important;
     width: 100%;
+	top: 0px;
     height: 70px;
     background-color: #77c6d4;
     box-shadow: 2px 2px rgba(136, 136, 136, 0.2);
@@ -190,9 +195,10 @@ body {
 
 #menuLateral {
     left: 0px;
-    position: absolute;
+    position: fixed;
     width: 0px;
     height: calc(100% - 70px);
+	margin-top: -10px;
     background-color: white;
     transition: all 0.3s;
     overflow: hidden;
