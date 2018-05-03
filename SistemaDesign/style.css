@@ -18,7 +18,6 @@ body {
 }
 
 #linha1{
-	border-radius: 15px 15px 0px 0px;
     background-color: #8c8c8c;
     width: 100%;
     height: 50px;
@@ -49,6 +48,10 @@ body {
     margin-left: 60px;
 }
 
+#tempEgrafico{
+	width: 70%;
+	float: left;
+}
 .temperatura {
     background-color: #fff;
     width: 250px;
@@ -56,10 +59,22 @@ body {
     padding: 20px;
     float: left;
 }
+.temperatura input{
+    height: 35px;
+    width: 195px;
+    background: #fabd6b;
+    color: white;
+	text-align: center;
+    font-size: 14.5px;
+    border: 0 none;
+    cursor: pointer;
+    margin-left: 29px;
+    margin-top: 190px;
+}
 
 .grafico {
     background-color: #fff;
-    width: 475px;
+    width: 455px;
     height: 400px;
     margin-left: 10px;
     padding: 20px;
@@ -68,11 +83,18 @@ body {
 
 .medias {
     background-color: #fff;
-    width: 271px;
-    height: 400px;
+    width: 330px;
+    height: 490px;
     margin-left: 10px;
-    padding: 20px;
     float: left;
+}
+
+.mediaBloco{
+    background-color: #77c6d4;
+    margin: 10px;
+    width: 143px;
+    height: 125px;
+    display: inline-block;
 }
 
 /*INICIO CSS CAIXA DE TEXTO*/
@@ -123,6 +145,12 @@ body {
     height: 70px;
     background-color: #77c6d4;
     box-shadow: 2px 2px rgba(136, 136, 136, 0.2);
+}
+
+#bell img{
+    margin: 5px;
+    width: 60px;
+    float: right
 }
 
 #ir {

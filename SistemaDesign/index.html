@@ -14,6 +14,8 @@
 			<p id ="ir" onclick="myIr()">&#9776;</p> 
 								
 		</div>
+		
+		<div id="bell"><img src="bellIcon.png"></div>
 	</div>
 	
 	<!--inicio menu-->
@@ -38,31 +40,41 @@
 		<h1>Bem vindo, Usuário da Silva</h1>
 	</div>
 
-	<div class="conteudo">	
-
-		<div id="linha1">  <img src="analytic.png"> <p>Seu histórico de temperatura</p></div>
+	<div class="conteudo">
+	
+		<div id="tempEgrafico">
+		<div id="linha1">  <img src="timeIcon.png"> <p>SUA TEMPERATURA HOJE</p></div>
 		
 		<div class="temperatura">
 			<div id="redondoTemp">
-					<p>TEMPERATURA ATUAL:</p>
-					<img src="12345.png" />
-					<label id="temp">0º</label>
+				<p>TEMPERATURA ATUAL:</p>
+				<img src="12345.png" />
+				<label id="temp">0º</label>				
 			</div>
+			<input type="#" name="relatorio" value="RELATÓRIO DETALHADO" onclick="#">
 		</div>
 
 		<div class="grafico">
 			<canvas id="chart"></canvas>
 		</div>
+		</div>
 		
 		<div class="medias">
-			<p> 6 medias de temperatura, obs: aquele que a Andressa fez</p>
+			<div id="linha1">  <img src="indicador.png"> <p>MEDIDAS</p></div>
+			
+			<div class="mediaBloco"> <p>asdafdg</p> </div>
+			<div class="mediaBloco"> <p>sgjhfsgj</p> </div>
+			<div class="mediaBloco"> <p>dfjfg</p> </div>
+			<div class="mediaBloco"> <p>fdjgj</p> </div>
+			<div class="mediaBloco"> <p>dfjgfg</p> </div>
+			<div class="mediaBloco"> <p>dfgjdf</p> </div>
 		</div>	
 		
 	</div>
 	
 	<div class="conteudo">		
 		<div class="cxTexto">
-			<div id="linha1"> <img src="listIcon.png"> <p>Anotações</p> </div>
+			<div id="linha1"> <img src="listIcon.png"> <p>ANOTAÇÕES</p> </div>
 			<div id="textoCss">
 			<input type="text" placeholder="         Faça suas anotações aqui :)" />				
 			</div>
@@ -73,7 +85,7 @@
 		</div>
 		
 		<div id="peixe01">
-			<div id="linha1"> <img src="listIcon.png"> <p>Painel a definir</p> </div>
+			<div id="linha1"> <img src="fishIcon.png"> <p>Painel a definir</p> </div>
 		</div>
 	</div>
 	
