@@ -159,7 +159,7 @@ body {
   opacity: 0.3;
 }
 
-#peixe01:hover .middle {
+#peixe01:hover .middle{
   opacity: 1;
 }
 
@@ -170,6 +170,7 @@ body {
     display: block;
     transition: .5s ease;
     backface-visibility: hidden;
+	margin-bottom: 25%;
 }
 
 .middle {
@@ -184,11 +185,37 @@ body {
 #trocar {
     background-color: #fabd6b;
     color: white;
-    font-size: 16px;
-    padding: 10px 1px;
+    font-size: 12px;
+    padding: 10px 20px;
     border: 0 none;
     text-align: center;
     cursor: pointer; 
+}
+
+.InfoPeixe{
+    position: relative;
+    width: 80%;
+    height: 9%;
+    margin-left: 10%;
+    resize: none;
+    margin-bottom: 4%;
+    color: #525252;
+    text-align: center;
+    font-size: 19px;
+    padding: 1%;
+    font-family: 'Century Gothic';
+	border: none;
+}
+
+.salvarInfos{
+    background-color: #fabd6b;
+    color: white;
+    font-size: 14px;
+    padding: 10px 30px;
+    border: 0 none;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 27%;
 }
 
 .menu {
