@@ -1,0 +1,245 @@
+<html>
+<head>
+<title>Teste</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="grafico.js" charset="ISO-8859-1"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
+<script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+</head>
+<body>
+	<div class="menu">
+		<div class="risquinho">	
+			<p id="voltar" onclick="myVoltar()">&#9776;</p>
+			<p id ="ir" onclick="myIr()">&#9776;</p> 								
+		</div>		
+		<div id="logo"><img src="peixinho22.png"></div>
+	</div>
+	<div id="bell"><img src="bellIcon.png"></div>
+	<!--inicio menu-->
+	<div id="menuLateral">	
+		<div class="menuUsuario">
+		<div class="fotoUsuario"></div>
+		<p class="nomeUsuario">Usuário</p>
+		</div>
+
+		<ul class="ulMenu">
+			
+			<li class="menuLi">Relatórios</li>
+			</ul>
+
+		<ul class="ulSair">
+			<li class="sairLi">Sair</li>	
+		</ul>
+	</div>
+	<!--fim menu-->
+	
+	<div id="bemVindo">
+		<h1>Bem vindo Usuário</h1>
+	</div>
+
+	<div id="conteudo">
+	
+		
+		<div class="temperatura">
+		<div id="linha1">  <img src="timeIcon.png"> <p>AQUÁRIO</p></div>
+		
+			<div id="redondoTemp">
+				<p>TEMPERATURA ATUAL:</p>
+				<img src="12345.png" />
+				<label id="temp">0º</label>				
+			</div>
+			<input type="#" name="relatorio" value="RELATÓRIO DETALHADO" onclick="#">
+		</div>
+		
+
+		<div class="grafico">
+			<canvas id="chart"></canvas>
+		</div>
+		
+		
+		<div class="medias">
+			<div id="linha2">  <img src="indicador.png"> <p>MEDIDAS</p></div>
+
+			<div class="mediaBloco"> <p>Menor Temp</p> </div>
+			<div class="mediaBloco"> <p>1 Quartil</p> </div>
+			<div class="mediaBloco"> <p>Mediana</p> </div>
+			<div class="mediaBloco"> <p>Media</p> </div>
+			<div class="mediaBloco"> <p>3 Quartil</p> </div>
+			<div class="mediaBloco"> <p>Maior Temp</p> </div>
+		</div>	
+		
+	
+	
+			
+		<div class="cxTexto">
+			<div id="linha1"> <img src="listIcon.png"> <p>ANOTAÇÕES</p> </div>
+			<div id="textoCss">
+			<input type="text" placeholder="         Faça suas anotações aqui :)" />				
+			</div>
+			
+			<div id="botTexto">
+			<input type="submit" name="Salvar" value="SALVAR" onclick="#">
+			</div>
+		</div>
+		
+		<div id="peixes">
+			<div id="linha1"> <img src="fishIcon.png"> <p>MEU AQUÁRIO:</p> </div>
+			<div id="peixe01">		
+				<img src="px01.jpg">
+				<div class="middle">
+					<input id="trocar" type="submit" name="trocarFT" value="TROCAR FOTO" onclick="#">					
+				</div>	
+				
+				<textarea class="InfoPeixe" type="text" placeholder="Nome"></textarea>
+				<textarea class="InfoPeixe" type="text" placeholder="Especie"></textarea>
+				<textarea class="InfoPeixe" type="text" placeholder="Temperatura"></textarea>
+				
+				<input class="salvarInfos" type="submit" name="salvarInfos" value="SALVAR" onclick="#">
+			</div>
+			
+			<div id="peixe01">	
+				<img src="px02.jpg">
+				<div class="middle">
+					<input id="trocar" type="submit" name="trocarFT" value="TROCAR FOTO" onclick="#">					
+				</div>				
+				
+				<textarea class="InfoPeixe" type="text" placeholder="Nome"></textarea>
+				<textarea class="InfoPeixe" type="text" placeholder="Especie"></textarea>
+				<textarea class="InfoPeixe" type="text" placeholder="Temperatura"></textarea>
+				
+				<input class="salvarInfos" type="submit" name="salvarInfos" value="SALVAR" onclick="#">
+			</div>
+			
+			<div id="peixe01">	
+				<img src="px03.jpg">
+				<div class="middle">
+					<input id="trocar" type="submit" name="trocarFT" value="TROCAR FOTO" onclick="#">
+				</div>				
+				
+				<textarea class="InfoPeixe" type="text" placeholder="Nome"></textarea>
+				<textarea class="InfoPeixe" type="text" placeholder="Especie"></textarea>
+				<textarea class="InfoPeixe" type="text" placeholder="Temperatura"></textarea>
+				
+				<input class="salvarInfos" type="submit" name="salvarInfos" value="SALVAR" onclick="#">
+				</div>
+			</div>
+		</div>
+	
+	</div>
+</div>
+
+
+<script>
+
+//Abrir Scrípt "Ação abrir e fechar menu"
+function myIr() {
+    document.getElementById("menuLateral").style.transition = "all 0.5s";
+    document.getElementById("menuLateral").style.width = "190px";
+	document.getElementById("ir").style.display = "none";
+	document.getElementById("conteudo").style.justifyContent = "flex-end";
+	document.getElementById("voltar").style.display = "initial";
+}
+
+function myVoltar(){
+	document.getElementById("ir").style.display = "initial";
+	document.getElementById("voltar").style.display = "none";	
+	document.getElementById("menuLateral").style.transition = "all 0.5s";
+    document.getElementById("menuLateral").style.width = "0px";
+	document.getElementById("conteudo").style.justifyContent = "center";
+}
+//Fechar Scrípt "Ação abrir e fechar menu"
+
+
+// Abrir Desenho do grafico
+ var context = document.getElementById("chart").getContext("2d");
+context.canvas.width = 500;
+context.canvas.height = 400;
+
+var configuration = {
+    type: 'line',
+    data: {
+        datasets: [{
+            label: "Variação de Temperatura",
+            type: 'line',
+        }]
+    },
+    options: {
+        scales: {
+            xAxes: [{
+                //type: 'value',
+                distribution: 'series',
+                ticks: {
+                    beginAtZero: true
+                }
+            }],
+            yAxes: [{
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Temperatura'
+                },
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        },
+        animation: {
+            duration: 0
+        }
+    }
+};
+
+var chart = new Chart(context, configuration);
+// Fechar Desenho do Grafico
+
+// Abrir Função de jogar a temperatura na Label
+this.lastIndexTemp = 0;
+this.time = 0;
+
+function get_data() {
+
+var http = new XMLHttpRequest();
+http.open('GET', 'http://localhost:3000/api', false);
+http.send(null);
+
+var obj = JSON.parse(http.responseText);
+
+if (obj.data.length == 0) {
+    return;
+}
+
+var _lastIndexTemp = this.lastIndexTemp;
+this.lastIndexTemp = obj.data.length;
+listTemp = obj.data.slice(_lastIndexTemp);
+
+listTemp.forEach(data => {
+
+    if (chart.data.labels.length == 10 && chart.data.datasets[0].data.length == 10) {
+        chart.data.labels.shift();
+        chart.data.datasets[0].data.shift();
+    }
+
+    chart.data.labels.push(this.time++);
+    chart.data.datasets[0].data.push(parseFloat(data));
+    chart.update();
+});
+
+document.getElementById('lblTemp').textContent = Math.floor(listTemp);
+console.log(listTemp);
+
+} 
+
+get_data();
+
+setInterval(() => {
+get_data();
+}, 1000);
+
+// Fechar Função de jogar a temperatura na Label
+
+</script>
+
+
+
+</body>
+</html>
