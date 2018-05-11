@@ -4,17 +4,69 @@
 }
 
 body {
-    background-color: #dadfe8;
+    background-color: rgb(245,245,245);
     width: 100%;
     justify-content: center;
     align-items: center;
 }
 
-.conteudo {
+#bemVindo h1 {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 25px;
+    font-family: Helvetica;
+    font-size: 30px;
+    font-kerning: normal;
+    font-stretch: extra-expanded;
+}
+
+#linha1 {
+    background-color: rgb(0,140,186);
+    width: 100%;
+    height: 50px;
+}
+
+    #linha1 p {
+        color: white;
+        font-size: 25px;
+        padding: 10px;
+        font-family: Helvetica;
+    }
+
+    #linha1 img {
+        width: 40px;
+        float: right;
+        margin: 5px;
+    }
+
+/*linha 2 aqui*/
+
+#linha2 {
+    background-color: rgb(0,140,186);
+    width: 100%;
+    height: 50px;
+}
+
+    #linha2 p {
+        color: white;
+        font-size: 25px;
+        padding: 10px;
+        font-family: Helvetica;
+    }
+
+    #linha2 img {
+        width: 40px;
+        float: right;
+        margin: 5px;
+    }
+
+/*fecha linha 2*/
+
+#conteudo {
     width: 100%;
     height: calc(100% - 70px);
     background-color: transparent;
-    position: absolute;
+    position: relative;
     display: flex;
     background-size: cover;
     justify-content: center;
@@ -22,96 +74,358 @@ body {
     flex-wrap: wrap;
 }
 
+#tempEgrafico {
+    margin-bottom: 50px;
+    width: 59%;
+    float: left;
+}
+
 .temperatura {
-    margin-top: 400px;
-    margin-left: 400px;
     background-color: #fff;
     width: 250px;
-    height: 300px;
+    height: 440px;
     margin: 10px;
-    padding: 20px;
     float: left;
-    border-radius: 10px;
+    border: solid 2px rgba(136, 136, 136, 0.2);
+}
+
+.btnRelatorio {
+    position: relative;
+    height: 35px;
+    width: 195px;
+    background: #fabd6b;
+    color: white;
+    text-align: center;
+    font-size: 14.5px;
+    border: 0 none;
+    cursor: pointer;
+    margin-left: 29px;
+    margin-top: 150px;
 }
 
 .grafico {
-    margin-top: 400px;
-    margin-left: 400px;
     background-color: #fff;
-    width: 500px;
+    width: 455px;
     height: 400px;
-    margin: 10px;
+    margin-left: 10px;
     padding: 20px;
     float: left;
-    border-radius: 10px;
+    border: solid 2px rgba(136, 136, 136, 0.2);
+}
+
+.medias {
+    margin-bottom: 50px;
+    background-color: #fff;
+    width: 330px;
+    height: 440px;
+    margin: 20px;
+    float: left;
+    border: solid 2px rgba(136, 136, 136, 0.2);
+}
+
+#lBaixa {
+    position: absolute;
+    font-size: 25px;
+    font-family: helvetica;
+    margin-top: 35px;
+    margin-left: 45px;
+}
+
+#lQuartilUm {
+    position: absolute;
+    font-size: 25px;
+    font-family: helvetica;
+    margin-top: 35px;
+    margin-left: 45px;
+}
+
+#lMediana {
+    position: absolute;
+    font-size: 25px;
+    font-family: helvetica;
+    margin-top: 35px;
+    margin-left: 45px;
+}
+
+#lMedia {
+    position: absolute;
+    font-size: 25px;
+    font-family: helvetica;
+    margin-top: 35px;
+    margin-left: 45px;
+}
+
+#lQuartilTres {
+    position: absolute;
+    font-size: 25px;
+    font-family: helvetica;
+    margin-top: 35px;
+    margin-left: 45px;
+}
+
+#lAlta {
+    position: absolute;
+    font-size: 25px;
+    font-family: helvetica;
+    margin-top: 35px;
+    margin-left: 45px;
+}
+
+.pMedias {
+    position: absolute;
+    margin-left: 10px;
+    font-family: helvetica;
+    font-size: 15px;
+    margin-top: 100px;
+}
+
+.pQuartil {
+    position: absolute;
+    margin-left: 40px;
+    font-family: helvetica;
+    font-size: 15px;
+    margin-top: 100px;
+}
+
+.pMediana {
+    position: absolute;
+    margin-left: 40px;
+    font-family: helvetica;
+    font-size: 15px;
+    margin-top: 100px;
+}
+
+
+.mediaBloco {
+    margin: 10px;
+    width: 143px;
+    height: 100px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+    .mediaBloco img {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        margin-top: 10px;
+        margin-left: 30px;
+    }
+
+/*INICIO CSS CAIXA DE TEXTO*/
+.cxTexto {
+    margin: 10px;
+    background-color: white;
+    width: 265px;
+    height: 400px;
+    padding-bottom: 50px;
+    float: left;
+    border-radius: 15px 15px 0px 0px;
+    border: solid 2px rgba(136, 136, 136, 0.2);
+}
+
+#textoCss {
+    margin-left:1px;
+    padding: 5px;
+    background-color: white;
+    width: 240px;
+
+}
+#sino {
+
+
+}
+
+#sino {
+    -webkit-animation: rotation 1.5s linear infinite;
 }
 
 
 
+ .txtAnotacoes {
+padding: 5px;
+width: 100%;
+height: 320px;
+resize: none;
+border-radius: 10px;
+font-family: Helvetica;
+font-size: 20px;
+}
+
+.btnSalvar {
+    height: 35px;
+    width: 100px;
+    background: #488dc5;
+    color: white;
+    font-family: "Helvetica";
+    font-size: 14.5px;
+    font-style: bold;
+    border: 0 none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 30%;
+    margin-top: 10px;
+}
+
+
+/*FIM CSS CAIXA DE TEXTO*/
+
+#peixes {
+    margin: 20px;
+    height: 450px;
+    width: 830px;
+    float: inherit;
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 15px 15px 0px 0px;
+    border: solid 2px rgba(136, 136, 136, 0.2);
+}
+
+#peixe01 {
+    float: left;
+    width: 30%;
+    height: 85%;
+    background-color: #daeff3;
+    display: inline-block;
+    margin: 12px;
+}
+
+
+    #peixe01 img {
+        width: 99%;
+        height: 50%;
+        opacity: 1;
+        display: block;
+        transition: .5s ease;
+        backface-visibility: hidden;
+        margin-bottom: 25%;
+    }
+
+.middle {
+    transition: .5s ease;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: -35%;
+    margin-left: 85%;
+}
+
+#trocar {
+    background-color: transparent;
+    color: white;
+    font-size: 12px;
+    border: 0 none;
+    text-align: center;
+    cursor: pointer;
+}
+
+    #trocar img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .InfoPeixe {
+    position: relative;
+    width: 80%;
+    height: 6%;
+    margin-left: 10%;
+    resize: none;
+    margin-bottom: 4%;
+    color: #525252;
+    text-align: center;
+    font-size: 19px;
+    padding: 1%;
+    font-family: "Helvetica";
+    border: none;
+}
+
+
+
+.salvarInfos {
+    background-color: #fabd6b;
+    color: white;
+    font-size: 14px;
+    padding: 6px 35px;
+    border: 0 none;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 26%;
+}
 
 .menu {
+    position: fixed;
+    z-index: 9 !important;
     width: 100%;
+    top: 0px;
     height: 70px;
-    background-color: #fff;
+    background-color: rgb(0,140,186);
     box-shadow: 2px 2px rgba(136, 136, 136, 0.2);
 }
 
+#logo {
+    float: right;
+}
+
+    #logo img {
+        padding: 10px;
+        width: 210px;
+    }
+
 #ir {
-    color: black;
-    font-family: century gothic;
-    font-size: 25px;
+    color: white;
+    font-size: 23px;
     cursor: pointer;
     position: absolute;
-    margin-left: 13px;
+    margin-left: 15px;
     margin-top: 7px;
 }
 
+#voltar {
+    color: white;
+    font-size: 23px;
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 7px;
+}
 
+#voltar:hover {
+        color: rgb(1, 52, 135);
+        transition: all 0.3s;
+}
+
+#ir:hover {
+    color: rgb(1, 52, 135);
+    transition: all 0.3s;
+}
 
 .risquinho {
     align-items: center;
     justify-content: center;
     position: absolute;
-    margin-top: 10px;
-    margin-left: 20px;
+    margin-top: 12px;
+    margin-left: 22px;
     background-color: transparent;
     border-radius: 50px;
     width: 50px;
     height: 50px;
 }
 
-    .risquinho:hover {
-        color: blue;
-        transition: all 0.3s;
-        background-color: #dadfe8;
-        border-radius: 50px;
-    }
-
-    .risquinho p:hover {
-        color: blue;
-    }
-
 #menuLateral {
     left: 0px;
-    position: absolute;
+    position: fixed;
     width: 0px;
     height: calc(100% - 70px);
-    background-color: white;
+    margin-top: -10px;
+    background-color: rgb(38,50,56);
     transition: all 0.3s;
     overflow: hidden;
     z-index: 9 !important;
     box-shadow: 2px 2px rgba(136, 136, 136, 0.2);
 }
 
-#voltar {
-    color: rgb(68, 134, 249);
-    font-family: century gothic;
-    font-size: 25px;
-    cursor: pointer;
-    position: absolute;
-    margin-left: 13px;
-    margin-top: 7px;
-}
+
 
 .ulSair {
     position: absolute;
@@ -123,15 +437,15 @@ body {
     padding: 0;
     width: 200px;
     display: initial;
-    background-color: rgb(68,134,249);
+    background-color: transparent;
 }
 
 .menuLi {
     cursor: pointer;
-    font-family: century gothic;
+    font-family: helvetica;
     font-size: 17px;
     display: block;
-    color: black;
+    color: rgb(132,150,159);
     padding: 8px 16px;
     text-decoration: none;
     overflow: hidden;
@@ -139,10 +453,10 @@ body {
 
 .sairLi {
     cursor: pointer;
-    font-family: century gothic;
+    font-family: helvetica;
     font-size: 17px;
     display: block;
-    color: white;
+    color: rgb(132,150,159);
     padding: 8px 16px;
     padding-left: 75px;
     text-decoration: none;
@@ -152,13 +466,14 @@ body {
 
 .menuLi:hover {
     transition: all 0.5s;
-    background-color: rgba(68, 134, 249,0.2);
-    color: rgb(68, 134, 249);
+    background-color: rgba(132, 150, 159,0.2);
+    color: white;
 }
 
-.ulSair:hover {
+.sairLi:hover {
     transition: all 0.5s;
-    background-color: rgb(56, 128, 259)
+    background-color: rgba(132, 150, 159,0.2);
+    color: white;
 }
 
 .menuUsuario {
@@ -168,12 +483,12 @@ body {
 }
 
 .nomeUsuario {
-    font-family: century gothic;
+    font-family: helvetica;
     font-size: 16px;
     position: absolute;
     padding-left: 90px;
     margin-top: 20px;
-    color: black;
+    color: rgb(132,150,159);
 }
 
 .fotoUsuario {
@@ -189,8 +504,7 @@ body {
 
 
 #redondoTemp {
-    margin-left: 45px;
-    width: 160px;
+    width: 250px;
     height: 160px;
     background-color: transparent;
     border-radius: 50%;
@@ -199,19 +513,45 @@ body {
     align-items: center;
     flex-wrap: wrap;
     font-size: 40px;
-    font-family: 'Century Gothic';
+    font-family: "Helvetica";
 }
+
+#lTemp {
+    position:absolute;
+    z-index: 5;
+    margin-top: 80px;
+    margin-left: 50px;
+}
+
+    #redondoTemp p {
+        font-size: 19px;
+        margin-top: 10px;
+    }
 
     #redondoTemp img {
+        width: 200px;
         position: absolute;
-        width: 160px;
-        height: 160px;
+        margin-top: 90px;
     }
+
 .pMedia {
-    font-family:'Century Gothic';
-    font-size:15px;
-    position:absolute;
-    margin-top:30px;
-    margin-left:10px;
+    font-family: "Helvetica";
+    font-size: 15px;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 10px;
 }
 
+
+#bell {
+    z-index: 9 !important;
+    position: fixed;
+    margin-top: 35%;
+    margin-left: 93%;
+}
+
+    #bell img {
+        margin: 5px;
+        width: 60px;
+        float: right
+    }

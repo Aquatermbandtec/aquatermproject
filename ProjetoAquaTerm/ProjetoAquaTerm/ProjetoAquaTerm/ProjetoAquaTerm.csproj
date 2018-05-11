@@ -66,18 +66,32 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="controller\AtualizaDados.aspx" />
     <Content Include="Contato.aspx" />
+    <Content Include="controller\AtualizaMaior.aspx" />
+    <Content Include="controller\AtualizaMedia.aspx" />
+    <Content Include="controller\AtualizaMediana.aspx" />
+    <Content Include="controller\AtualizaMenor.aspx" />
+    <Content Include="controller\AtualizaQuartilTres.aspx" />
+    <Content Include="controller\AtualizaQuartilUm.aspx" />
     <Content Include="css\contato.css" />
     <Content Include="css\sobre.css" />
+    <Content Include="img\12345.png" />
+    <Content Include="img\analytic.png" />
+    <Content Include="img\bellIcon.png" />
+    <Content Include="img\cameraIcon.png" />
     <Content Include="img\email.png" />
     <Content Include="img\face.png" />
+    <Content Include="img\fishIcon.png" />
     <Content Include="img\github.png" />
+    <Content Include="img\indicador.png" />
     <Content Include="img\insta.png" />
     <Content Include="img\integrante11.jpg" />
     <Content Include="img\integrante2.jpg" />
     <Content Include="img\integrante3.jpg" />
     <Content Include="img\integrante4.jpeg" />
     <Content Include="img\integrante5.jpg" />
+    <Content Include="img\listIcon.png" />
     <Content Include="img\login.png" />
     <Content Include="img\loginB.png" />
     <Content Include="img\logo.png" />
@@ -89,12 +103,16 @@
     <Content Include="img\peixinho22.png" />
     <Content Include="img\peixinhoIcon.png" />
     <Content Include="img\projeto.png" />
+    <Content Include="img\px01.jpg" />
+    <Content Include="img\px02.jpg" />
+    <Content Include="img\px03.jpg" />
     <Content Include="img\qm.png" />
     <Content Include="css\sistema.css" />
     <Content Include="img\sli1.png" />
     <Content Include="img\sli2.png" />
     <Content Include="img\sli3.png" />
     <Content Include="css\style.css" />
+    <Content Include="img\timeIcon.png" />
     <Content Include="img\twitter.png" />
     <Content Include="img\icone.jpg" />
     <Content Include="img\user.png" />
@@ -122,6 +140,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controller\AtualizaDados.aspx.cs">
+      <DependentUpon>AtualizaDados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controller\AtualizaDados.aspx.designer.cs">
+      <DependentUpon>AtualizaDados.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Cadastro.aspx.cs">
       <DependentUpon>Cadastro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -135,6 +160,48 @@
     </Compile>
     <Compile Include="Contato.aspx.designer.cs">
       <DependentUpon>Contato.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="controller\AtualizaMaior.aspx.cs">
+      <DependentUpon>AtualizaMaior.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controller\AtualizaMaior.aspx.designer.cs">
+      <DependentUpon>AtualizaMaior.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="controller\AtualizaMedia.aspx.cs">
+      <DependentUpon>AtualizaMedia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controller\AtualizaMedia.aspx.designer.cs">
+      <DependentUpon>AtualizaMedia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="controller\AtualizaMediana.aspx.cs">
+      <DependentUpon>AtualizaMediana.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controller\AtualizaMediana.aspx.designer.cs">
+      <DependentUpon>AtualizaMediana.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="controller\AtualizaMenor.aspx.cs">
+      <DependentUpon>AtualizaMenor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controller\AtualizaMenor.aspx.designer.cs">
+      <DependentUpon>AtualizaMenor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="controller\AtualizaQuartilTres.aspx.cs">
+      <DependentUpon>AtualizaQuartilTres.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controller\AtualizaQuartilTres.aspx.designer.cs">
+      <DependentUpon>AtualizaQuartilTres.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="controller\AtualizaQuartilUm.aspx.cs">
+      <DependentUpon>AtualizaQuartilUm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controller\AtualizaQuartilUm.aspx.designer.cs">
+      <DependentUpon>AtualizaQuartilUm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
