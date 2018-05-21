@@ -244,23 +244,18 @@
         get_data();
 
 
-       //  CRIA UMA VETOR QUE RECEBE TODOS OS ARQUIVOS QUE ESTÃO FAZENDO A ATUALIZAÇÃO E JOGANDO ELES NAS LABELS
+        //  CRIA UMA VETOR QUE RECEBE TODOS OS ARQUIVOS QUE ESTÃO FAZENDO A ATUALIZAÇÃO E JOGANDO ELES NAS LABELS
         // ISSO ANTES DO SETINTERVAL
 
-       
-        
-        
-        
-        
         var chamadas = [
             { pagina: 'AtualizaMenor.aspx', destino: 'lBaixa' },
             { pagina: 'AtualizaMaior.aspx', destino: 'lAlta' },
-           { pagina: 'AtualizaDados.aspx', destino: 'lTemp' },
+            { pagina: 'AtualizaDados.aspx', destino: 'lTemp' },
             { pagina: 'AtualizaQuartilUm.aspx', destino: 'lQuartilUm' },
             { pagina: 'AtualizaQuartilTres.aspx', destino: 'lQuartilTres' },
             { pagina: 'AtualizaMediana.aspx', destino: 'lMediana' },
             { pagina: 'AtualizaMedia.aspx', destino: 'lMedia' }
-        
+        ]
 
         setInterval(() => {
 
@@ -268,7 +263,7 @@
 
             // CRIA UM FOR QUE DECLARA C QUE SERÁ CONTADOR, A CONDIÇÃO QUE SE FOR MENOR QUE O TAMANHO DO VETOR, E INCREMENTA
 
-            for (c=0; c < chamadas.length; c = c +1) {
+            for (c = 0; c < chamadas.length; c++) {
                 var xhttp = new XMLHttpRequest();
                 xhttp.destino = chamadas[c].destino;
 
@@ -280,11 +275,11 @@
                         if (!isNaN(numero)) {
                             document.getElementById(this.destino).innerHTML = numero + "ºC";
                         }
-                        
+
                     }
                 };
 
-                
+
                 // "TRUE" PARA DEIXAR UMA SICRONIA NA HORA DE ATUALIZAR OS DADOS DA PAGINA, EVITANDO ASSIM TRAVAMENTOS
                 xhttp.open("GET", "controller/" + chamadas[c].pagina, true);
                 xhttp.send();
