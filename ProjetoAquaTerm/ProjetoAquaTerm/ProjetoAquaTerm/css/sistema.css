@@ -324,7 +324,7 @@ font-size: 20px;
         height: 40px;
     }
 
-    .InfoPeixe {
+.infoPeixe {
     position: relative;
     width: 80%;
     height: 6%;
@@ -338,6 +338,52 @@ font-size: 20px;
     font-family: "Helvetica";
     border: none;
 }
+
+/*#txtTemperaturaPeixe3 {
+    position: relative;
+    width: 80%;
+    height: 6%;
+    margin-left: 10%;
+    resize: none;
+    margin-bottom: 4%;
+    color: #525252;
+    text-align: center;
+    font-size: 19px;
+    padding: 1%;
+    font-family: "Helvetica";
+    border: none;
+}
+
+#txtEspeciePeixe3 {
+    position: relative;
+    width: 80%;
+    height: 6%;
+    margin-left: 10%;
+    resize: none;
+    margin-bottom: 4%;
+    color: #525252;
+    text-align: center;
+    font-size: 19px;
+    padding: 1%;
+    font-family: "Helvetica";
+    border: none;
+}
+
+#txtNomePeixe3 {
+    position: relative;
+    width: 80%;
+    height: 6%;
+    margin-left: 10%;
+    resize: none;
+    margin-bottom: 4%;
+    color: #525252;
+    text-align: center;
+    font-size: 19px;
+    padding: 1%;
+    font-family: "Helvetica";
+    border: none;
+}*/
+
 
 
 
@@ -523,10 +569,13 @@ font-size: 20px;
     margin-left: 50px;
 }
 
-    #redondoTemp p {
-        font-size: 19px;
-        margin-top: 10px;
-    }
+.pTempReal {
+    font-family: Helvetica;
+    font-size: 18px;
+    z-index: 1;
+    margin-top: 10px;
+    margin-left: 25px;
+}
 
     #redondoTemp img {
         width: 200px;

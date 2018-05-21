@@ -41,6 +41,11 @@
 					<label for="email">E-Mail:</label>
                     <asp:TextBox ID="txtEmailUsuario" runat="server" TextMode="Email" placeholder="Seu E-mail" ></asp:TextBox>
 				</div>
+                <div class="divform">
+					<label for="assunto">Assunto:</label>
+                    <asp:TextBox ID="txtAssunto" runat="server" placeholder="Assunto"></asp:TextBox>
+				</div>
+
 				<div class="divform">
 					<label for="msg">Mensagem:</label>
                     <asp:TextBox ID="TxtAreaMensagem" runat="server" TextMode="MultiLine" placeholder="Sua Mensagem" CssClass="txtAreaMensagem"></asp:TextBox>

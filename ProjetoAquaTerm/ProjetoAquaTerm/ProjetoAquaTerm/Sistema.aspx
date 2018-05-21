@@ -51,8 +51,9 @@
 		<div class="temperatura">
 		<div id="linha1">  <img src="img/timeIcon.png"> <p>Aquário</p></div>
 		
+            <p class="pTempReal">TEMPERATURA ATUAL</p>
+				
 			<div id="redondoTemp">
-				<p>Temperatura Atual</p>
 				<img src="img/12345.png" />
                 <asp:Label ID="lTemp" runat="server" Text="0º"></asp:Label>
 			</div>
@@ -65,8 +66,12 @@
 
 		<div class="medias">
 			<div id="linha2">  <img src="img/indicador.png"> <p>Medidas</p></div>
-
-			<div class="mediaBloco"><img src="img/aquario.png"/><asp:Label ID="lBaixa" runat="server" Text="0º"></asp:Label><p class="pMedias">Temperatura Baixa</p></div>
+            
+           <div class="mediaBloco"><img src="img/aquario.png"/>
+                
+                <asp:Label ID="lBaixa" runat="server" Text="0º"></asp:Label>
+                
+                <p class="pMedias">Temperatura Baixa</p></div>
 			<div class="mediaBloco"><img src="img/aquario.png"/><asp:Label ID="lQuartilUm" runat="server" Text="0º"></asp:Label><p class="pQuartil">1º Quartil</p></div>
 			<div class="mediaBloco"><img src="img/aquario.png"/><asp:Label ID="lMediana" runat="server" Text="0º"></asp:Label><p class="pMediana">Mediana</p></div>
 			<div class="mediaBloco"><img src="img/aquario.png"/><asp:Label ID="lMedia" runat="server" Text="0º"></asp:Label><p class="pMedias">Temperatura Media</p></div>
@@ -94,12 +99,14 @@
 				</div>	
 				
 
-				<textarea class="InfoPeixe" type="text" placeholder="Nome"></textarea>
-				<textarea class="InfoPeixe" type="text" placeholder="Especie"></textarea>
-				<textarea class="InfoPeixe" type="text" placeholder="Temperatura"></textarea>
-				
-				<input class="salvarInfos" type="submit" name="salvarInfos" value="SALVAR" onclick="#">
-			</div>
+
+                <asp:TextBox ID="txtNomePeixe1" runat="server" CssClass="infoPeixe" placeholder="Nome"></asp:TextBox>
+                <asp:TextBox ID="txtEspeciePeixe1" runat="server" CssClass="infoPeixe" placeholder="Espécie"></asp:TextBox>
+                <asp:TextBox ID="txtTemperaturaPeixe1" runat="server" CssClass="infoPeixe" placeholder="Temperatura ideal"></asp:TextBox>
+
+				 <asp:Button ID="btnSalvarInfos1" runat="server" Text="SALVAR" CssClass="salvarInfos" />
+
+               </div>
 			
 			<div id="peixe01">	
 				<img src="img/px02.jpg">
@@ -107,12 +114,13 @@
 				<button id="trocar" name="trocarFT" onclick="#"><img src="img/cameraIcon.png"></button>						
 				</div>				
 				
-				<textarea class="InfoPeixe" type="text" placeholder="Nome"></textarea>
-				<textarea class="InfoPeixe" type="text" placeholder="Especie"></textarea>
-				<textarea class="InfoPeixe" type="text" placeholder="Temperatura"></textarea>
-				
-				<input class="salvarInfos" type="submit" name="salvarInfos" value="SALVAR" onclick="#">
-			</div>
+				<asp:TextBox ID="txtNomePeixe2" runat="server" CssClass="infoPeixe" placeholder="Nome"></asp:TextBox>
+                <asp:TextBox ID="txtEspeciePeixe2" runat="server" CssClass="infoPeixe" placeholder="Espécie"></asp:TextBox>
+                <asp:TextBox ID="txtTemperaturaPeixe2" runat="server" CssClass="infoPeixe" placeholder="Temperatura ideal"></asp:TextBox>
+
+			     <asp:Button ID="btnSalvarInfos2" runat="server" Text="SALVAR" CssClass="salvarInfos" />
+	
+            </div>
 			
 			<div id="peixe01">	
 				<img src="img/px03.jpg">
@@ -120,17 +128,23 @@
 					<button id="trocar" name="trocarFT" onclick="#"><img src="img/cameraIcon.png"></button>	
 				</div>				
 				
-				<textarea class="InfoPeixe" type="text" placeholder="Nome"></textarea>
-				<textarea class="InfoPeixe" type="text" placeholder="Especie"></textarea>
-				<textarea class="InfoPeixe" type="text" placeholder="Temperatura"></textarea>
-				
-				<input class="salvarInfos" type="submit" name="salvarInfos" value="SALVAR" onclick="#">
+
+
+				<asp:TextBox ID="txtNomePeixe3" runat="server" CssClass="infoPeixe" placeholder="Nome"></asp:TextBox>
+                <asp:TextBox ID="txtEspeciePeixe3" runat="server" CssClass="infoPeixe" placeholder="Espécie"></asp:TextBox>
+                <asp:TextBox ID="txtTemperaturaPeixe3" runat="server" CssClass="infoPeixe" placeholder="Temperatura Ideal"></asp:TextBox>
+
+                <asp:Button ID="btnSalvarInfos3" runat="server" Text="SALVAR" CssClass="salvarInfos" />
+
 				</div>
 			</div>
 		</div>
 	</form>
 	
+
     <script>
+        //BACK-END
+
 
         //Abrir Scrípt "Ação abrir e fechar menu"
         function myIr() {
@@ -155,6 +169,8 @@
         var context = document.getElementById("chart").getContext("2d");
         context.canvas.width = 500;
         context.canvas.height = 400;
+        
+
 
         var configuration = {
             type: 'line',
@@ -228,48 +244,52 @@
         get_data();
 
 
-        // PEGAR A TEMPERATURA NO BANCO E JOGAR NA LABEL
-        var xhttp = new XMLHttpRequest();
-        var xhttpMaior = new XMLHttpRequest();
-        var xhttpMenor = new XMLHttpRequest();
-        var xhttpMedia = new XMLHttpRequest();
-        var xhttpQuartilUm = new XMLHttpRequest();
-        var xhttpMediana = new XMLHttpRequest();
-        var xhttpQuartilTres = new XMLHttpRequest();
+       //  CRIA UMA VETOR QUE RECEBE TODOS OS ARQUIVOS QUE ESTÃO FAZENDO A ATUALIZAÇÃO E JOGANDO ELES NAS LABELS
+        // ISSO ANTES DO SETINTERVAL
+
+       
+        
+        
+        
+        
+        var chamadas = [
+            { pagina: 'AtualizaMenor.aspx', destino: 'lBaixa' },
+            { pagina: 'AtualizaMaior.aspx', destino: 'lAlta' },
+           { pagina: 'AtualizaDados.aspx', destino: 'lTemp' },
+            { pagina: 'AtualizaQuartilUm.aspx', destino: 'lQuartilUm' },
+            { pagina: 'AtualizaQuartilTres.aspx', destino: 'lQuartilTres' },
+            { pagina: 'AtualizaMediana.aspx', destino: 'lMediana' },
+            { pagina: 'AtualizaMedia.aspx', destino: 'lMedia' }
+        
 
         setInterval(() => {
 
             get_data();
 
-            xhttp.open("GET", "controller/AtualizaDados.aspx", false);
-            xhttp.send();
+            // CRIA UM FOR QUE DECLARA C QUE SERÁ CONTADOR, A CONDIÇÃO QUE SE FOR MENOR QUE O TAMANHO DO VETOR, E INCREMENTA
 
-            xhttpMaior.open("GET", "controller/AtualizaMaior.aspx", false);
-            xhttpMaior.send();
+            for (c=0; c < chamadas.length; c = c +1) {
+                var xhttp = new XMLHttpRequest();
+                xhttp.destino = chamadas[c].destino;
 
-            xhttpMenor.open("GET", "controller/AtualizaMenor.aspx", false);
-            xhttpMenor.send();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var numero = parseInt(this.responseText)
 
-            xhttpMedia.open("GET", "controller/AtualizaMedia.aspx", false);
-            xhttpMedia.send();
+                        // SE ELE RETORNA UM VALOR NULO OU UM VALOR QUE OU NÃO CONVERTIDO ELE MOSTRARA O ULTIMO VALOR (POR PRECAUÇÃO)
+                        if (!isNaN(numero)) {
+                            document.getElementById(this.destino).innerHTML = numero + "ºC";
+                        }
+                        
+                    }
+                };
 
-            xhttpQuartilUm.open("GET", "controller/AtualizaQuartilUm.aspx", false);
-            xhttpQuartilUm.send();
+                
+                // "TRUE" PARA DEIXAR UMA SICRONIA NA HORA DE ATUALIZAR OS DADOS DA PAGINA, EVITANDO ASSIM TRAVAMENTOS
+                xhttp.open("GET", "controller/" + chamadas[c].pagina, true);
+                xhttp.send();
 
-            xhttpMediana.open("GET", "controller/AtualizaMediana.aspx", false);
-            xhttpMediana.send();
-
-            xhttpQuartilTres.open("GET", "controller/AtualizaQuartilTres.aspx", false);
-            xhttpQuartilTres.send();
-
-            document.getElementById("lTemp").innerHTML = parseInt(xhttp.responseText) + "ºC";
-            document.getElementById("lAlta").innerHTML = parseInt(xhttpMaior.responseText) + "ºC";
-            document.getElementById("lBaixa").innerHTML = parseInt(xhttpMenor.responseText) + "ºC";
-            document.getElementById("lMedia").innerHTML = parseInt(xhttpMedia.responseText) + "ºC";
-            document.getElementById("lQuartilUm").innerHTML = parseInt(xhttpQuartilUm.responseText) + "ºC";
-            document.getElementById("lMediana").innerHTML = parseInt(xhttpMediana.responseText) + "ºC";
-            document.getElementById("lQuartilTres").innerHTML = parseInt(xhttpQuartilTres.responseText) + "ºC";
-
+            }
         }, 5000);
 
     </script>

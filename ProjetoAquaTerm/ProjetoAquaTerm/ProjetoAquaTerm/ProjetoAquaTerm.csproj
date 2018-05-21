@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="controller\Atualizacoes.aspx" />
     <Content Include="controller\AtualizaDados.aspx" />
     <Content Include="Contato.aspx" />
     <Content Include="controller\AtualizaMaior.aspx" />
@@ -83,6 +84,7 @@
     <Content Include="img\email.png" />
     <Content Include="img\face.png" />
     <Content Include="img\fishIcon.png" />
+    <Content Include="img\fotodocaio.png" />
     <Content Include="img\github.png" />
     <Content Include="img\indicador.png" />
     <Content Include="img\insta.png" />
@@ -140,6 +142,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controller\Atualizacoes.aspx.cs">
+      <DependentUpon>Atualizacoes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controller\Atualizacoes.aspx.designer.cs">
+      <DependentUpon>Atualizacoes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="controller\AtualizaDados.aspx.cs">
       <DependentUpon>AtualizaDados.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
