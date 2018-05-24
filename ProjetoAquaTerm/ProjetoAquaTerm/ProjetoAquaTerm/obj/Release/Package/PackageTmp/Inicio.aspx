@@ -9,79 +9,112 @@
     <title>Home</title>
 </head>
 <body>
-    <ul>
-			<a href="Inicio.aspx"><img class="logo" src="img/logo.png"></a>
+       <!--INICIO DO MENU-->
+		<ul id="menuUL">
+			<a href="Inicio.aspx"><img class="logo" src="img/logo.png"/></a>
 			<li class="logar"><a href="Login.aspx" target="blank" title="Entrar no sistema"><img class="loginIcon" src="img/login.png" a href="#"></a>
 			
 			</li>
 			
-			<!--<li class="menu"><a href="pagePadrao.html"><p>MENU 1</p></a></li>-->
+			<!--<li class="menu"><a href="Manual.html"><p>MANUAL</p></a></li>-->
 			<li class="menu"><a href="Contato.aspx"><p>CONTATO</p></a></li>
-			<!--<li class="menu"><a href="pagePadrao.html"><p>MENU 3</p></a></li>-->
-			<!--<li class="menu"><a href="pagePadrao.html"><p>MENU 4</p></a></li>-->
+			<li class="menu"><a href="Sobre.aspx"><p>SOBRE NÓS</p></a></li>
+
 		</ul>
+		<!--FIM DO MENU-->
 		
+		<!--INICIO DO SLIDE-->	
 		<div class="slideshow-container">
 
 			<div class="mySlides fade">
 			  <img src="img/sli1.png" style="width:100%">
-			  <div class="text">O CONTROLE DE TEMPERATURA DO AQUÁRIO DE SEU PEIXE EM NOSSAS MÃOS</div>
+			  <div class="text">Conheça abaixo nossos planos para lojistas, e aquarios de pequeno porte!</div>
 			</div>
 
 			<div class="mySlides fade">
 			  <img src="img/sli2.png" style="width:100%">
-			  <div class="text">O CONTROLE DE TEMPERATURA DO AQUÁRIO DE SEU PEIXE EM NOSSAS MÃOS</div>
+			  <div class="text">Conheça abaixo nossos planos para lojistas, e aquarios de pequeno porte!</div>
 			</div>
 
 			<div class="mySlides fade">
 			  <img src="img/sli3.png" style="width:100%">
-			  <div class="text">O CONTROLE DE TEMPERATURA DO AQUÁRIO DE SEU PEIXE EM NOSSAS MÃOS</div>
+			  <div class="text">Conheça abaixo nossos planos para lojistas, e aquarios de pequeno porte!</div>
 			</div>
 
 			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 			<a class="next" onclick="plusSlides(1)">&#10095;</a>
 
 		</div>
+		<!--FIM DO SLIDE-->
 		
-		<div class="riscaHori">SOBRE NÓS</div>
-
+		<div id="conteudoP"> 
+			<h1>O QUE NÓS FAZEMOS ?</h1>
+			<p>
+O projeto AquaTermº oferece um gerenciador de temperatura para aquários, com objetivo de facilitar o controle e visualização do usuário, aumentando a expectativa de vida dos peixes e inovando com criatividade e tecnologia IoT.
+			</p>
+			<div> <a href="Contato.aspx" class="saibaMais">SAIBA MAIS...</a></div>
+		</div>
+		
 		<div id="blocos">
-
-			<div id= "bloco1"><img src="img/qm.png"/>
-			<h1>Missão</h1>
-			<p id="qmSomos">Facilitar o controle e manutenção do aquario, aumentando a vida util do peixe e otimizando seu tempo</p>
+			<div class="bloco">
+				<h1>1º PASSO</h1>
+				<p>Possuir um dispositivo AquaTerm programado para gerenciar a temperatura do seu aquario</p>
+				<img src="img/arduino.jpg"/>
 			</div>
-
-			<div id= "bloco2"><img src="img/projeto.png"/>
-			<h1>Visão</h1>
-			<p id="projet">Ser referencia na manutenção e controle de temperatura em aquarios, operando como facilitador.</p>
+			
+			<div class="bloco">
+				<h1>2° PASSO</h1>
+				<p>Colocar o Dispositivo AquaTerm em seu aquario para que possa ser feita a medição</p>
+				<img src="img/aquarioWall.jpg"/>
 			</div>
-
-			<div id= "bloco3"><img src="img/metodologia.png"/>
-			<h1>Valores</h1>
-			<p id="ideia">Preocupação, Qualidade e Tecnologia é a motivação para criação da solução IoT nomeDoProjetoAqui </p>
+			
+			<div class="bloco">
+				<h1>3° PASSO</h1>
+				<p>Fazer cadastro/login no site, acessar seu perfil de gerenciamento, e pronto!</p>
+				<img src="img/image2.jpg"/>
 			</div>
-
-
 		</div>
+			
+		<div class="lojaCasa">
+			<div id="casa">	
+				<h1>CASA</h1>
+				<ul> 
+				  <li class="listPlanos"> <img src="img/peixinhoIcon.png"/>Gerenciamento de Temperatura</li> <br>
+				  <li class="listPlanos"> <img src="img/peixinhoIcon.png"/>Gráficos de Gerenciamento</li> <br> 
+				  <li class="listPlanos"> <img src="img/peixinhoIcon.png"/>Controle de Luminosidade</li> <br> 
+				  <li class="listPlanos"> <img src="img/peixinhoIcon.png"/>Especificação de Temperatura Ideal</li> <br> 
+				  <li class="listPlanos"> <img src="img/peixinhoIcon.png"/>Campos para anotações</li> <br> 
+				</ul>
+				
+				<div class="adquirir"> <a href="Contato.aspx">QUERO ESSE!</a></div>
+				
+			</div>
+			
+			<div id="loja">
+				<h1>LOJA</h1>
+				<ul> 
+				  <li class="listPlanos"> <img src="img/peixinhoIcon.png"/>Gerenciamento de Temperatura</li> <br>
+				  <li class="listPlanos"> <img src="img/peixinhoIcon.png"/>Gráficos de Gerenciamento</li> <br> 
+				  <li class="listPlanos"> <img src="img/peixinhoIcon.png"/>Campo para Anotações</li> <br> 
+				  <li class="listPlanos"> <img src="img/peixinhoIcon.png"/>Nome/Foto dos peixes</li> <br> 
+				</ul>
+				
+				<div class="adquirir"> <a href="Contato.aspx">QUERO ESSE!</a></div>
+				
+			</div>
+		</div>	
+		
+		
 
-		<div id="integrantes"><p class="inte">INTEGRANTES</p>
-
-			<div id= "integrante1"><p id="int1"> Thiago Lima</p></div>
-			<div id= "integrante2"><p id="int2"> Giuliana França</p></div>
-			<div id= "integrante3"><p id="int3"> Caio Massayuki</p></div>
-			<div id= "integrante4"><p id="int4"> Gustavo Batistuti</p></div>
-			<div id= "integrante5"><p id="int5"> Andressa Souza</p></div>
-
-		</div>
-
+		
+		<!--INICIO RODAPE-->
 		<div id="rodape">
 			<div id= "infor">
 				<img class="redeIcon" src="img/map.png"/>
 				<p id="titulo">ENDEREÇO E TELEFONE</p>
 				<p id="info">
 					Rua Haddock Lobo, 595 - Cerqueira César, São Paulo - SP, 01310-300<br><br>
-					Telefone: (11) 1111-1111
+					Telefone: 4567-8977
 				</p>
 			</div>
 			
@@ -90,37 +123,38 @@
 			<div id="redeSoc">
 				<p id="titleRede">AQUA TERM COM VOCÊ:</p>
 				
-				<img class="redeIcon" src="img/face.png"/>
-				<img class="redeIcon" src="img/insta.png"/>
-				<img class="redeIcon" src="img/twitter.png"/>
-				<img class="redeIcon" src="img/github.png"/>
+				<img class="redeIcon" src="img/face.png" >
+				<img class="redeIcon" src="img/insta.png" >
+				<img class="redeIcon" src="img/twitter.png" >
+				<img class="redeIcon" src="img/github.png" >
 			</div>
 			
 		</div>
-
+		<!--FIM RODAPE-->
+		
+		<!--JS DO SLIDE-->
 		<script>
-			var slideIndex = 1;
-			showSlides(slideIndex);
+            var slideIndex = 1;
+            showSlides(slideIndex);
 
-			function plusSlides(n) {
-			  showSlides(slideIndex += n);
-			}
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
 
-			function currentSlide(n) {
-			  showSlides(slideIndex = n);
-			}
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
 
-			function showSlides(n) {
-			  var i;
-			  var slides = document.getElementsByClassName("mySlides");
-			  if (n > slides.length) {slideIndex = 1}    
-			  if (n < 1) {slideIndex = slides.length}
-			  for (i = 0; i < slides.length; i++) {
-				  slides[i].style.display = "none";  
-			  }
-			  slides[slideIndex-1].style.display = "block";  
-			}
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slides[slideIndex - 1].style.display = "block";
+            }
 		</script>
-
 </body>
 </html>

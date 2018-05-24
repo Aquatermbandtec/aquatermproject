@@ -14,7 +14,6 @@
             <div id="label">LOGIN</div>
 
               <div class="input-div" id="input-usuario">
-
                   <asp:TextBox ID="txtUser" runat="server" placeholder="Usuario"></asp:TextBox>
             </div>
 
@@ -30,6 +29,5 @@
             </div>
             </div>
             </form>
-          
 </body>
 </html>
