@@ -220,38 +220,23 @@
 	
 		
 		<div class="temperatura">
-		<div id="linha1">  <img src="img/timeIcon.png"/> <p>Aquário</p></div>
+		<div id="linha1">  <img src="img/timeIcon.png"> <p>Aquário</p></div>
 		
             <p class="pTempReal">TEMPERATURA ATUAL</p>
 				
 			<div id="redondoTemp">
 				<img src="img/12345.png" />
-                <asp:Label ID="lTemp" runat="server"></asp:Label>
+                <asp:Label ID="lTemp" runat="server" Text="0º"></asp:Label>
 			</div>
             <asp:Button ID="btnRelatorio" runat="server" Text="RELATORIO DETALHADO" CssClass="btnRelatorio" />
 		</div>
 
 		<div class="grafico">
-			<div id="chartdiv"></div>
+			<canvas id="chart"></canvas>
 		</div>
 
-		<div class="medias">
-			<div id="linha2">  <img src="img/indicador.png"/> <p>Medidas</p></div>
-            
-           <div class="mediaBloco"><img src="img/aquario.png"/>
-                
-                <asp:Label ID="lBaixa" runat="server" Text="0º"></asp:Label>
-                
-            <p class="pMedias">Temperatura Baixa</p></div>
-			<div class="mediaBloco"><img src="img/aquario.png"/><asp:Label ID="lQuartilUm" runat="server" Text="0º"></asp:Label><p class="pQuartil">1º Quartil</p></div>
-			<div class="mediaBloco"><img src="img/aquario.png"/><asp:Label ID="lMediana" runat="server" Text="0º"></asp:Label><p class="pMediana">Mediana</p></div>
-			<div class="mediaBloco"><img src="img/aquario.png"/><asp:Label ID="lMedia" runat="server" Text="0º"></asp:Label><p class="pMedias">Temperatura Media</p></div>
-			<div class="mediaBloco"><img src="img/aquario.png"/><asp:Label ID="lQuartilTres" runat="server" Text="0º"></asp:Label><p class="pQuartil">3º Quartil</p></div>
-			<div class="mediaBloco"><img src="img/aquario.png"/><asp:Label ID="lAlta" runat="server" Text="0º"></asp:Label><p class="pMedias">Temperatura Alta</p></div>
-		</div>	
-			
-		<div class="cxTexto">
-			<div id="linha1"> <img src="img/listIcon.png"/> <p>Anotações</p> </div>
+        <div class="cxTexto">
+			<div id="linha1"> <img src="img/listIcon.png"> <p>Anotações</p> </div>
 			<div id="textoCss">
        <asp:TextBox ID="txtAnotacoes" runat="server" TextMode="MultiLine" CssClass="txtAnotacoes" placeholder="Faça suas anotaçoes aqui"></asp:TextBox>
 			</div>
@@ -260,13 +245,30 @@
                 <asp:Button ID="btnSalvar" runat="server" Text="SALVAR" CssClass="btnSalvar" />
             </div>
 		</div>
+
+		<div class="medias">
+			<div id="linha2">  <img src="img/indicador.png"> <p>Medidas</p></div>
+            
+           <div class="mediaBloco"><img src="img/aquario.png"/>
+                
+                <asp:Label ID="lBaixa" runat="server" Text="0º"></asp:Label>
+                
+                <p class="pMedias">Temperatura Baixa</p></div>
+			<div class="mediaBloco"><img src="img/aquario.png"/><asp:Label ID="lQuartilUm" runat="server" Text="0º"></asp:Label><p class="pQuartil">1º Quartil</p></div>
+			<div class="mediaBloco"><img src="img/aquario.png"/><asp:Label ID="lMediana" runat="server" Text="0º"></asp:Label><p class="pMediana">Mediana</p></div>
+			<div class="mediaBloco"><img src="img/aquario.png"/><asp:Label ID="lMedia" runat="server" Text="0º"></asp:Label><p class="pMedias">Temperatura Media</p></div>
+			<div class="mediaBloco"><img src="img/aquario.png"/><asp:Label ID="lQuartilTres" runat="server" Text="0º"></asp:Label><p class="pQuartil">3º Quartil</p></div>
+			<div class="mediaBloco"><img src="img/aquario.png"/><asp:Label ID="lAlta" runat="server" Text="0º"></asp:Label><p class="pMedias">Temperatura Alta</p></div>
+		</div>	
+			
+		
 		
 		<div id="peixes">
-			<div id="linha1"> <img src="img/fishIcon.png"/> <p>Meu Aquário:</p> </div>
+			<div id="linha1"> <img src="img/fishIcon.png"> <p>Meu Aquário:</p> </div>
 			<div id="peixe01">		
-				<img src="img/px01.jpg"/>
+				<img src="img/px01.jpg">
 				<div class="middle">
-					<button id="trocar" name="trocarFT" onclick="#"><img src="img/cameraIcon.png"/></button>					
+					<button id="trocar" name="trocarFT" onclick="#"><img src="img/cameraIcon.png"></button>					
 				</div>	
 				
 
@@ -280,9 +282,9 @@
                </div>
 			
 			<div id="peixe01">	
-				<img src="img/px02.jpg"/>
+				<img src="img/px02.jpg">
 				<div class="middle">
-				<button id="trocar" name="trocarFT" onclick="#"><img src="img/cameraIcon.png"/></button>						
+				<button id="trocar" name="trocarFT" onclick="#"><img src="img/cameraIcon.png"></button>						
 				</div>				
 				
 				<asp:TextBox ID="txtNomePeixe2" runat="server" CssClass="infoPeixe" placeholder="Nome"></asp:TextBox>
@@ -294,10 +296,12 @@
             </div>
 			
 			<div id="peixe01">	
-				<img src="img/px03.jpg"/>
+				<img src="img/px03.jpg">
 				<div class="middle">
-					<button id="trocar" name="trocarFT" onclick="#"><img src="img/cameraIcon.png"/></button>	
+					<button id="trocar" name="trocarFT" onclick="#"><img src="img/cameraIcon.png"></button>	
 				</div>				
+				
+
 
 				<asp:TextBox ID="txtNomePeixe3" runat="server" CssClass="infoPeixe" placeholder="Nome"></asp:TextBox>
                 <asp:TextBox ID="txtEspeciePeixe3" runat="server" CssClass="infoPeixe" placeholder="Espécie"></asp:TextBox>
