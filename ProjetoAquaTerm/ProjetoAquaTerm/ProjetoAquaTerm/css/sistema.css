@@ -121,10 +121,14 @@ body {
 .medias {
     margin-bottom: 50px;
     background-color: #fff;
-    width: 330px;
-    height: 440px;
+    min-width: 1050px;
+    min-height: 200px;
     margin: 20px;
     float: left;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
     border: solid 2px rgba(136, 136, 136, 0.2);
 }
 
@@ -202,9 +206,8 @@ body {
 
 
 .mediaBloco {
-    margin: 10px;
-    width: 143px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
     display: inline-block;
     margin-top: 10px;
 }
@@ -230,15 +233,13 @@ body {
 }
 
 #textoCss {
-    margin-left:1px;
+    margin-left: 1px;
     padding: 5px;
     background-color: white;
     width: 240px;
-
 }
+
 #sino {
-
-
 }
 
 #sino {
@@ -247,14 +248,14 @@ body {
 
 
 
- .txtAnotacoes {
-padding: 5px;
-width: 100%;
-height: 320px;
-resize: none;
-border-radius: 10px;
-font-family: Helvetica;
-font-size: 20px;
+.txtAnotacoes {
+    padding: 5px;
+    width: 100%;
+    height: 320px;
+    resize: none;
+    border-radius: 10px;
+    font-family: Helvetica;
+    font-size: 20px;
 }
 
 .btnSalvar {
@@ -276,23 +277,25 @@ font-size: 20px;
 /*FIM CSS CAIXA DE TEXTO*/
 
 #peixes {
-    margin: 20px;
     height: 450px;
-    width: 830px;
-    float: inherit;
-    margin-left: 10px;
+    width: 1050px;
     background-color: white;
     border-radius: 15px 15px 0px 0px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
     border: solid 2px rgba(136, 136, 136, 0.2);
+    margin-bottom: 20px;
 }
 
 #peixe01 {
-    float: left;
     width: 30%;
     height: 85%;
     background-color: #daeff3;
     display: inline-block;
-    margin: 12px;
+    margin: 10px;
+    position: relative;
 }
 
 
@@ -441,10 +444,10 @@ font-size: 20px;
     margin-top: 7px;
 }
 
-#voltar:hover {
+    #voltar:hover {
         color: rgb(1, 52, 135);
         transition: all 0.3s;
-}
+    }
 
 #ir:hover {
     color: rgb(1, 52, 135);
@@ -568,7 +571,7 @@ font-size: 20px;
 }
 
 #lTemp {
-    position:absolute;
+    position: absolute;
     z-index: 5;
     margin-top: 80px;
     margin-left: 50px;
@@ -582,11 +585,11 @@ font-size: 20px;
     margin-left: 25px;
 }
 
-    #redondoTemp img {
-        width: 200px;
-        position: absolute;
-        margin-top: 90px;
-    }
+#redondoTemp img {
+    width: 200px;
+    position: absolute;
+    margin-top: 90px;
+}
 
 .pMedia {
     font-family: "Helvetica";
