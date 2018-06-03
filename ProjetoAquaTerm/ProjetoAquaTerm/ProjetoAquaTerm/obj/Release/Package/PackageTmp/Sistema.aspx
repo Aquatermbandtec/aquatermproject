@@ -10,10 +10,15 @@
     <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
+
+       
         google.charts.load('current', { packages: ['corechart', 'line'] });
         google.charts.setOnLoadCallback(desenharGrafico);
 
+
         var total = 0, data = null, grafico = null;
+
+       
 
         function desenharGrafico() {
             if (data == null) {
@@ -21,17 +26,33 @@
                 data = new google.visualization.DataTable();
                 data.addColumn('number', 'Tempo');
                 data.addColumn('number', 'Temperatura');
-
+                data.addRow([undefined, undefined]);
                 grafico = new google.charts.Line(document.getElementById('chartdiv'));
 
             }
             var options = {
                 title: 'Variação de temperaturas',
+                color: ['#fff000'],
+                width: 420,
+                height: 400,
+                chartArea: { width: "50px", height: "70px" },
+                legend: { position: 'none' },
+                curverType: 'function',
+                enableInteractivity: false,
+                animation: {
+                    duration: 1000,
+                    easing: 'linear',
+                },
+                vAxis: { minValue: 0, maxValue: 1000 },
+                vAxis: { title: "Cups" },
+                hAxis: { title: "Month" },
             };
 
             grafico.draw(data, options);
+            
 
             setTimeout(function () {
+                
                 $.ajax({
                     type: 'POST',
                     dataType: 'json',
@@ -39,19 +60,24 @@
                     url: 'controller/AtualizaDados.aspx/temperaturaAtual',
                     data: '{}',
                     success: function (response) {
+
                         data.addRow([total, response.d]);//adiciona uma linha com duas colunas e insira os valores0(temperatura)valores1(tempo)
                         total++;
                         desenharGrafico();
-                        $('#lTemp').text(Math.round(response.d)+"ºC");
+                        $('#lTemp').text(Math.floor(response.d) + "ºC");
+                        $('#lAuxiliar').text(Math.floor(response.d));
+
                     },
                     error: function () {
                     }
                 });
 
-
+            
             }, 5000);
 
-        };
+            };
+      
+
 
         //AJAX PARA PEGAR A MAIOR TEMPERATURA
         var enviando = false;
@@ -69,7 +95,7 @@
                         enviando = true;
                     },
                     success: function (response) {
-                        $('#lAlta').text(Math.round(response.d)+"ºC");
+                        $('#lAlta').text(Math.floor(response.d)+"ºC");
                         //document.getElementById(chamadas[c].destino).innerHTML = Math.round(response.d);
                         enviando = false;
                     },
@@ -78,18 +104,39 @@
                     }
                 });
             }
+
+            // ajax para pegar a maior temp
+            $.ajax({
+                type: 'POST',
+                dataType: 'json',
+                contentType: 'application/json',
+                url: 'controller/AtualizaDados.aspx/temperaturaMenor',
+                data: '{}',
+                beforeSend: function () {
+                    enviando = true;
+                },
+                success: function (response) {
+                    $('#lBaixa').text(Math.floor(response.d) + "ºC");
+                    //document.getElementById(chamadas[c].destino).innerHTML = Math.round(response.d);
+                    enviando = false;
+                },
+
+                error: function () {
+                }
+            });
+
             //AJAX PARA PEGAR A MENOR TEMPERATURA
                 $.ajax({
                     type: 'POST',
                     dataType: 'json',
                     contentType: 'application/json',
-                    url: 'controller/AtualizaDados.aspx/temperaturaMenor',
+                    url: 'controller/AtualizaDados.aspx/temperaturaMedia',
                     data: '{}',
                     beforeSend: function () {
                         enviando = true;
                     },
                     success: function (response) {
-                        $('#lBaixa').text(Math.round(response.d)+"ºC");
+                        $('#lMedia').text(Math.floor(response.d)+"ºC");
                         //document.getElementById(chamadas[c].destino).innerHTML = Math.round(response.d);
                         enviando = false;
                     },
@@ -102,13 +149,13 @@
                     type: 'POST',
                     dataType: 'json',
                     contentType: 'application/json',
-                    url: 'controller/AtualizaDados.aspx/temperaturaMedia',
+                    url: 'controller/AtualizaDados.aspx/temperaturaMediana',
                     data: '{}',
                     beforeSend: function () {
                         enviando = true;
                     },
                     success: function (response) {
-                        $('#lMedia').text(Math.round(response.d)+"ºC");
+                        $('#lMediana').text(Math.floor(response.d)+"ºC");
                         //document.getElementById(chamadas[c].destino).innerHTML = Math.round(response.d);
                         enviando = false;
                     },
@@ -122,13 +169,13 @@
                     type: 'POST',
                     dataType: 'json',
                     contentType: 'application/json',
-                    url: 'controller/AtualizaDados.aspx/temperaturaMediana',
+                    url: 'controller/AtualizaDados.aspx/temperaturaQuartilUm',
                     data: '{}',
                     beforeSend: function () {
                         enviando = true;
                     },
                     success: function (response) {
-                        $('#lMediana').text(Math.round(response.d)+"ºC");
+                        $('#lQuartilUm').text(Math.floor(response.d)+"ºC");
                         //document.getElementById(chamadas[c].destino).innerHTML = Math.round(response.d);
                         enviando = false;
                     },
@@ -142,33 +189,13 @@
                     type: 'POST',
                     dataType: 'json',
                     contentType: 'application/json',
-                    url: 'controller/AtualizaDados.aspx/temperaturaQuartilUm',
-                    data: '{}',
-                    beforeSend: function () {
-                        enviando = true;
-                    },
-                    success: function (response) {
-                        $('#lQuartilUm').text(Math.round(response.d)+"ºC");
-                        //document.getElementById(chamadas[c].destino).innerHTML = Math.round(response.d);
-                        enviando = false;
-                    },
-
-                    error: function () {
-                    }
-                });
-
-            //AJAX PARA PEGAR O TERCEIRO QUARTIL
-                $.ajax({
-                    type: 'POST',
-                    dataType: 'json',
-                    contentType: 'application/json',
                     url: 'controller/AtualizaDados.aspx/temperaturaQuartilTres',
                     data: '{}',
                     beforeSend: function () {
                         enviando = true;
                     },
                     success: function (response) {
-                        $('#lQuartilTres').text(Math.round(response.d)+"ºC");
+                        $('#lQuartilTres').text(Math.floor(response.d)+"ºC");
                         //document.getElementById(chamadas[c].destino).innerHTML = Math.round(response.d);
                         enviando = false;
                     },
@@ -179,18 +206,34 @@
         }, 5000);
 
 
+       
+
+
+
         //Medidas de Analytics com o novo jeito
         </script>
 </head>
 <body>
     <form name="form" runat="server">
     <div class="menu">
-		<div class="risquinho">	
+		<div id="risquinho">	
 			<p id="voltar" onclick="myVoltar()">&#9776;</p>
 			<p id ="ir" onclick="myIr()">&#9776;</p> 								
 		</div>		
-		<div id="logo"><img src="img/peixinho22.png"/></div>
+		<div id="logo"><img src="img/logoPrincipal.png"/></div>
 	</div>
+        <!-- abre div de notificaçoes -->
+    <div id="notifica">
+	<div class="linha">
+	<img src="img/alert.png">
+	</div>
+        <br />
+	<p> A temperatura de seu aquário ultrapassou 25 graus </p>
+	<div class="linhaBaixo">
+		<img src="img/setaBaixo.png">
+	</div>
+</div>
+        <!-- fecha div de notificaçoes -->
 	<div id="bell"><img src="img/bellIcon.png" id="sino" /></div>
 	<!--inicio menu-->
 	<div id="menuLateral">	
@@ -221,12 +264,12 @@
 		
 		<div class="temperatura">
 		<div id="linha1">  <img src="img/timeIcon.png"/> <p>Aquário</p></div>
-		
+		 <asp:Label ID="lAuxiliar" runat="server" Text="0"></asp:Label>
             <p class="pTempReal">TEMPERATURA ATUAL</p>
 				
 			<div id="redondoTemp">
-				<img src="img/12345.png" />
-                <asp:Label ID="lTemp" runat="server"></asp:Label>
+                <img src="img/12345.png" />
+                <asp:Label ID="lTemp" runat="server" Text="0º"></asp:Label>
 			</div>
             <asp:Button ID="btnRelatorio" runat="server" Text="RELATORIO DETALHADO" CssClass="btnRelatorio" />
 		</div>
@@ -331,6 +374,22 @@
             document.getElementById("menuLateral").style.width = "0px";
             document.getElementById("conteudo").style.justifyContent = "center";
         }
+
+       
+        setInterval(() => {
+            var n = Math.floor(document.getElementById('lAuxiliar').innerText);
+
+            if (n > 25) {
+                var div = document.getElementById('notifica').style.transition = "5.5s";
+                var div = document.getElementById('notifica').style.display = "initial";
+
+            } else {
+                var div = document.getElementById('notifica').style.transition = "0.5s";
+                var div = document.getElementById('notifica').style.display = "none";
+            }
+
+        },100)
+
         //Fechar Scrípt "Ação abrir e fechar menu"
 
 

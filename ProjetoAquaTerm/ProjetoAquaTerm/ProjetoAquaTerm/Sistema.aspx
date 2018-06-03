@@ -10,7 +10,6 @@
     <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-<<<<<<< HEAD
 
        
         google.charts.load('current', { packages: ['corechart', 'line'] });
@@ -21,38 +20,32 @@
 
        
 
-=======
-        google.charts.load('current', { packages: ['corechart', 'line'] });
-        google.charts.setOnLoadCallback(desenharGrafico);
-
-        var total = 0, data = null, grafico = null;
-
->>>>>>> 6d9bcc4ff9a2f899c1cef1ce742bff83cecd7457
         function desenharGrafico() {
             if (data == null) {
 
                 data = new google.visualization.DataTable();
                 data.addColumn('number', 'Tempo');
                 data.addColumn('number', 'Temperatura');
-<<<<<<< HEAD
                 data.addRow([undefined, undefined]);
-=======
-
->>>>>>> 6d9bcc4ff9a2f899c1cef1ce742bff83cecd7457
                 grafico = new google.charts.Line(document.getElementById('chartdiv'));
 
             }
             var options = {
                 title: 'Variação de temperaturas',
-<<<<<<< HEAD
                 color: ['#fff000'],
                 width: 420,
                 height: 400,
                 chartArea: { width: "50px", height: "70px" },
                 legend: { position: 'none' },
                 curverType: 'function',
-
+                enableInteractivity: false,
+                animation: {
+                    duration: 1000,
+                    easing: 'linear',
+                },
                 vAxis: { minValue: 0, maxValue: 1000 },
+                vAxis: { title: "Cups" },
+                hAxis: { title: "Month" },
             };
 
             grafico.draw(data, options);
@@ -60,13 +53,6 @@
 
             setTimeout(function () {
                 
-=======
-            };
-
-            grafico.draw(data, options);
-
-            setTimeout(function () {
->>>>>>> 6d9bcc4ff9a2f899c1cef1ce742bff83cecd7457
                 $.ajax({
                     type: 'POST',
                     dataType: 'json',
@@ -74,37 +60,24 @@
                     url: 'controller/AtualizaDados.aspx/temperaturaAtual',
                     data: '{}',
                     success: function (response) {
-<<<<<<< HEAD
 
                         data.addRow([total, response.d]);//adiciona uma linha com duas colunas e insira os valores0(temperatura)valores1(tempo)
                         total++;
                         desenharGrafico();
                         $('#lTemp').text(Math.floor(response.d) + "ºC");
+                        $('#lAuxiliar').text(Math.floor(response.d));
 
-=======
-                        data.addRow([total, response.d]);//adiciona uma linha com duas colunas e insira os valores0(temperatura)valores1(tempo)
-                        total++;
-                        desenharGrafico();
-                        $('#lTemp').text(Math.round(response.d)+"ºC");
->>>>>>> 6d9bcc4ff9a2f899c1cef1ce742bff83cecd7457
                     },
                     error: function () {
                     }
                 });
 
-<<<<<<< HEAD
             
             }, 5000);
 
             };
       
 
-=======
-
-            }, 5000);
-
-        };
->>>>>>> 6d9bcc4ff9a2f899c1cef1ce742bff83cecd7457
 
         //AJAX PARA PEGAR A MAIOR TEMPERATURA
         var enviando = false;
@@ -122,11 +95,7 @@
                         enviando = true;
                     },
                     success: function (response) {
-<<<<<<< HEAD
                         $('#lAlta').text(Math.floor(response.d)+"ºC");
-=======
-                        $('#lAlta').text(Math.round(response.d)+"ºC");
->>>>>>> 6d9bcc4ff9a2f899c1cef1ce742bff83cecd7457
                         //document.getElementById(chamadas[c].destino).innerHTML = Math.round(response.d);
                         enviando = false;
                     },
@@ -135,7 +104,6 @@
                     }
                 });
             }
-<<<<<<< HEAD
 
             // ajax para pegar a maior temp
             $.ajax({
@@ -157,28 +125,18 @@
                 }
             });
 
-=======
->>>>>>> 6d9bcc4ff9a2f899c1cef1ce742bff83cecd7457
             //AJAX PARA PEGAR A MENOR TEMPERATURA
                 $.ajax({
                     type: 'POST',
                     dataType: 'json',
                     contentType: 'application/json',
-<<<<<<< HEAD
                     url: 'controller/AtualizaDados.aspx/temperaturaMedia',
-=======
-                    url: 'controller/AtualizaDados.aspx/temperaturaMenor',
->>>>>>> 6d9bcc4ff9a2f899c1cef1ce742bff83cecd7457
                     data: '{}',
                     beforeSend: function () {
                         enviando = true;
                     },
                     success: function (response) {
-<<<<<<< HEAD
                         $('#lMedia').text(Math.floor(response.d)+"ºC");
-=======
-                        $('#lBaixa').text(Math.round(response.d)+"ºC");
->>>>>>> 6d9bcc4ff9a2f899c1cef1ce742bff83cecd7457
                         //document.getElementById(chamadas[c].destino).innerHTML = Math.round(response.d);
                         enviando = false;
                     },
@@ -191,21 +149,13 @@
                     type: 'POST',
                     dataType: 'json',
                     contentType: 'application/json',
-<<<<<<< HEAD
                     url: 'controller/AtualizaDados.aspx/temperaturaMediana',
-=======
-                    url: 'controller/AtualizaDados.aspx/temperaturaMedia',
->>>>>>> 6d9bcc4ff9a2f899c1cef1ce742bff83cecd7457
                     data: '{}',
                     beforeSend: function () {
                         enviando = true;
                     },
                     success: function (response) {
-<<<<<<< HEAD
                         $('#lMediana').text(Math.floor(response.d)+"ºC");
-=======
-                        $('#lMedia').text(Math.round(response.d)+"ºC");
->>>>>>> 6d9bcc4ff9a2f899c1cef1ce742bff83cecd7457
                         //document.getElementById(chamadas[c].destino).innerHTML = Math.round(response.d);
                         enviando = false;
                     },
@@ -219,21 +169,13 @@
                     type: 'POST',
                     dataType: 'json',
                     contentType: 'application/json',
-<<<<<<< HEAD
                     url: 'controller/AtualizaDados.aspx/temperaturaQuartilUm',
-=======
-                    url: 'controller/AtualizaDados.aspx/temperaturaMediana',
->>>>>>> 6d9bcc4ff9a2f899c1cef1ce742bff83cecd7457
                     data: '{}',
                     beforeSend: function () {
                         enviando = true;
                     },
                     success: function (response) {
-<<<<<<< HEAD
                         $('#lQuartilUm').text(Math.floor(response.d)+"ºC");
-=======
-                        $('#lMediana').text(Math.round(response.d)+"ºC");
->>>>>>> 6d9bcc4ff9a2f899c1cef1ce742bff83cecd7457
                         //document.getElementById(chamadas[c].destino).innerHTML = Math.round(response.d);
                         enviando = false;
                     },
@@ -247,65 +189,13 @@
                     type: 'POST',
                     dataType: 'json',
                     contentType: 'application/json',
-<<<<<<< HEAD
                     url: 'controller/AtualizaDados.aspx/temperaturaQuartilTres',
-=======
-                    url: 'controller/AtualizaDados.aspx/temperaturaQuartilUm',
->>>>>>> 6d9bcc4ff9a2f899c1cef1ce742bff83cecd7457
                     data: '{}',
                     beforeSend: function () {
                         enviando = true;
                     },
                     success: function (response) {
-<<<<<<< HEAD
                         $('#lQuartilTres').text(Math.floor(response.d)+"ºC");
-=======
-                        $('#lQuartilUm').text(Math.round(response.d)+"ºC");
->>>>>>> 6d9bcc4ff9a2f899c1cef1ce742bff83cecd7457
-                        //document.getElementById(chamadas[c].destino).innerHTML = Math.round(response.d);
-                        enviando = false;
-                    },
-
-                    error: function () {
-                    }
-                });
-<<<<<<< HEAD
-        }, 5000);
-
-
-     
-
-
-        // alerta de temperatura
-        //setInterval(() => {
-
-        //    var n = document.getElementById('lTemp').innerHTML;
-
-        //    if (n > 20){ 
-        //        var div = document.getElementById('conteudo').style.transition = "0.5s";
-        //        var div = document.getElementById('conteudo').style.backgroundColor = "blue";
-        //        var div = document.getElementById('conteudo').style.backgroundColor = "red";
-        //    }
-
-
-        //},100);
-
-
-
-=======
-
-            //AJAX PARA PEGAR O TERCEIRO QUARTIL
-                $.ajax({
-                    type: 'POST',
-                    dataType: 'json',
-                    contentType: 'application/json',
-                    url: 'controller/AtualizaDados.aspx/temperaturaQuartilTres',
-                    data: '{}',
-                    beforeSend: function () {
-                        enviando = true;
-                    },
-                    success: function (response) {
-                        $('#lQuartilTres').text(Math.round(response.d)+"ºC");
                         //document.getElementById(chamadas[c].destino).innerHTML = Math.round(response.d);
                         enviando = false;
                     },
@@ -314,7 +204,10 @@
                     }
                 });
         }, 5000);
->>>>>>> 6d9bcc4ff9a2f899c1cef1ce742bff83cecd7457
+
+
+       
+
 
 
         //Medidas de Analytics com o novo jeito
@@ -323,12 +216,24 @@
 <body>
     <form name="form" runat="server">
     <div class="menu">
-		<div class="risquinho">	
+		<div id="risquinho">	
 			<p id="voltar" onclick="myVoltar()">&#9776;</p>
 			<p id ="ir" onclick="myIr()">&#9776;</p> 								
 		</div>		
-		<div id="logo"><img src="img/peixinho22.png"/></div>
+		<div id="logo"><img src="img/logoPrincipal.png"/></div>
 	</div>
+        <!-- abre div de notificaçoes -->
+    <div id="notifica">
+	<div class="linha">
+	<img src="img/alert.png">
+	</div>
+        <br />
+	<p> A temperatura de seu aquário ultrapassou 25 graus </p>
+	<div class="linhaBaixo">
+		<img src="img/setaBaixo.png">
+	</div>
+</div>
+        <!-- fecha div de notificaçoes -->
 	<div id="bell"><img src="img/bellIcon.png" id="sino" /></div>
 	<!--inicio menu-->
 	<div id="menuLateral">	
@@ -359,11 +264,11 @@
 		
 		<div class="temperatura">
 		<div id="linha1">  <img src="img/timeIcon.png"/> <p>Aquário</p></div>
-		
+		 <asp:Label ID="lAuxiliar" runat="server" Text="0"></asp:Label>
             <p class="pTempReal">TEMPERATURA ATUAL</p>
 				
 			<div id="redondoTemp">
-				<img src="img/12345.png" />
+                <img src="img/12345.png" />
                 <asp:Label ID="lTemp" runat="server" Text="0º"></asp:Label>
 			</div>
             <asp:Button ID="btnRelatorio" runat="server" Text="RELATORIO DETALHADO" CssClass="btnRelatorio" />
@@ -371,17 +276,6 @@
 
 		<div class="grafico">
 			<div id="chartdiv"></div>
-		</div>
-
-        <div class="cxTexto">
-			<div id="linha1"> <img src="img/listIcon.png"> <p>Anotações</p> </div>
-			<div id="textoCss">
-       <asp:TextBox ID="txtAnotacoes" runat="server" TextMode="MultiLine" CssClass="txtAnotacoes" placeholder="Faça suas anotaçoes aqui"></asp:TextBox>
-			</div>
-			
-			<div id="botTexto">
-                <asp:Button ID="btnSalvar" runat="server" Text="SALVAR" CssClass="btnSalvar" />
-            </div>
 		</div>
 
 		<div class="medias">
@@ -399,7 +293,6 @@
 			<div class="mediaBloco"><img src="img/aquario.png"/><asp:Label ID="lAlta" runat="server" Text="0º"></asp:Label><p class="pMedias">Temperatura Alta</p></div>
 		</div>	
 			
-<<<<<<< HEAD
 		<div class="cxTexto">
 			<div id="linha1"> <img src="img/listIcon.png"/> <p>Anotações</p> </div>
 			<div id="textoCss">
@@ -410,9 +303,6 @@
                 <asp:Button ID="btnSalvar" runat="server" Text="SALVAR" CssClass="btnSalvar" />
             </div>
 		</div>
-=======
-		
->>>>>>> 6d9bcc4ff9a2f899c1cef1ce742bff83cecd7457
 		
 		<div id="peixes">
 			<div id="linha1"> <img src="img/fishIcon.png"/> <p>Meu Aquário:</p> </div>
@@ -484,6 +374,22 @@
             document.getElementById("menuLateral").style.width = "0px";
             document.getElementById("conteudo").style.justifyContent = "center";
         }
+
+       
+        setInterval(() => {
+            var n = Math.floor(document.getElementById('lAuxiliar').innerText);
+
+            if (n > 25) {
+                var div = document.getElementById('notifica').style.transition = "5.5s";
+                var div = document.getElementById('notifica').style.display = "initial";
+
+            } else {
+                var div = document.getElementById('notifica').style.transition = "0.5s";
+                var div = document.getElementById('notifica').style.display = "none";
+            }
+
+        },100)
+
         //Fechar Scrípt "Ação abrir e fechar menu"
 
 

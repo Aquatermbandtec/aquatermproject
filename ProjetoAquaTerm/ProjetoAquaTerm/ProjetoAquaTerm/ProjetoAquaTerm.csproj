@@ -75,7 +75,10 @@
     <Content Include="controller\AtualizaMenor.aspx" />
     <Content Include="controller\AtualizaQuartilTres.aspx" />
     <Content Include="controller\AtualizaQuartilUm.aspx" />
+    <Content Include="img\alert.png" />
     <Content Include="css\contato.css" />
+    <Content Include="img\logoPrincipal.png" />
+    <Content Include="img\setaBaixo.png" />
     <Content Include="css\sobre.css" />
     <Content Include="img\12345.png" />
     <Content Include="img\analytic.png" />

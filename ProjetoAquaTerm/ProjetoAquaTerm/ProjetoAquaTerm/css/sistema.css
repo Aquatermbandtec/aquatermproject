@@ -20,6 +20,9 @@ body {
     font-stretch: extra-expanded;
 }
 
+#lAuxiliar {display:none;}
+
+
 #linha1 {
     background-color: rgb(0,140,186);
     width: 100%;
@@ -119,17 +122,16 @@ body {
 }
 
 .medias {
-    margin-bottom: 50px;
+    justify-content:center;
+    flex-wrap:wrap;
+    display:flex;
     background-color: #fff;
-    min-width: 1050px;
-    min-height: 200px;
+    width: 330px;
+    height: 440px;
     margin: 20px;
     float: left;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
     border: solid 2px rgba(136, 136, 136, 0.2);
+    padding-bottom: 2px;
 }
 
 #lBaixa {
@@ -206,10 +208,11 @@ body {
 
 
 .mediaBloco {
-    width: 140px;
-    height: 140px;
-    display: inline-block;
-    margin-top: 10px;
+    margin: 10px;
+    width: 143px;
+    height: 100px;
+    margin-bottom: 20px;
+    
 }
 
     .mediaBloco img {
@@ -233,13 +236,15 @@ body {
 }
 
 #textoCss {
-    margin-left: 1px;
+    margin-left:1px;
     padding: 5px;
     background-color: white;
     width: 240px;
-}
 
+}
 #sino {
+
+
 }
 
 #sino {
@@ -248,14 +253,14 @@ body {
 
 
 
-.txtAnotacoes {
-    padding: 5px;
-    width: 100%;
-    height: 320px;
-    resize: none;
-    border-radius: 10px;
-    font-family: Helvetica;
-    font-size: 20px;
+ .txtAnotacoes {
+padding: 5px;
+width: 100%;
+height: 320px;
+resize: none;
+border-radius: 10px;
+font-family: Helvetica;
+font-size: 20px;
 }
 
 .btnSalvar {
@@ -277,25 +282,23 @@ body {
 /*FIM CSS CAIXA DE TEXTO*/
 
 #peixes {
+    margin: 20px;
     height: 450px;
-    width: 1050px;
+    width: 830px;
+    float: inherit;
+    margin-left: 10px;
     background-color: white;
     border-radius: 15px 15px 0px 0px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    display: flex;
     border: solid 2px rgba(136, 136, 136, 0.2);
-    margin-bottom: 20px;
 }
 
 #peixe01 {
+    float: left;
     width: 30%;
     height: 85%;
     background-color: #daeff3;
     display: inline-block;
-    margin: 10px;
-    position: relative;
+    margin: 12px;
 }
 
 
@@ -430,8 +433,8 @@ body {
     font-size: 23px;
     cursor: pointer;
     position: absolute;
-    margin-left: 15px;
-    margin-top: 7px;
+    margin-left: 25px;
+    margin-top: 20px;
 }
 
 #voltar {
@@ -440,14 +443,14 @@ body {
     display: none;
     cursor: pointer;
     position: absolute;
-    margin-left: 15px;
-    margin-top: 7px;
+    margin-left: 25px;
+    margin-top: 20px;
 }
 
-    #voltar:hover {
+#voltar:hover {
         color: rgb(1, 52, 135);
         transition: all 0.3s;
-    }
+}
 
 #ir:hover {
     color: rgb(1, 52, 135);
@@ -466,11 +469,13 @@ body {
     height: 50px;
 }
 
+
+
 #menuLateral {
     left: 0px;
     position: fixed;
     width: 0px;
-    height: calc(100% - 70px);
+    min-height: calc(100% - 70px);
     margin-top: -10px;
     background-color: rgb(38,50,56);
     transition: all 0.3s;
@@ -571,7 +576,7 @@ body {
 }
 
 #lTemp {
-    position: absolute;
+    position:absolute;
     z-index: 5;
     margin-top: 80px;
     margin-left: 50px;
@@ -585,11 +590,11 @@ body {
     margin-left: 25px;
 }
 
-#redondoTemp img {
-    width: 200px;
-    position: absolute;
-    margin-top: 90px;
-}
+    #redondoTemp img {
+        width: 200px;
+        position: absolute;
+        margin-top: 90px;
+    }
 
 .pMedia {
     font-family: "Helvetica";
@@ -599,12 +604,67 @@ body {
     margin-left: 10px;
 }
 
+/*abre css das notificaçoes*/
+
+#notifica {
+    display: none;
+    position: fixed;
+    z-index: 9 !important;
+    margin-top: 26%;
+    margin-left: 88%;
+    width: 160px;
+    height: 105px;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px;
+    color: gray;
+    background-color: black;
+}
+
+.linha {
+    width: 100%;
+    height: 20px;
+    background-color: transparent;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.linhaBaixo {
+    width: 100%;
+    height: 5px;
+    background-color: transparent;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#notifica p {
+    width: 100%;
+    font-family: "helvetica";
+    font-size: 15px;
+}
+
+.linha img {
+    width: 30px;
+    height: 30px;
+}
+
+.linhaBaixo img {
+    width: 30px;
+    height: 30px;
+    margin-top: -3px;
+}
+
+/*fecha css das notificaçoes*/
+
 
 #bell {
     z-index: 9 !important;
     position: fixed;
     margin-top: 35%;
-    margin-left: 93%;
+    margin-left: 91.3%;
 }
 
     #bell img {

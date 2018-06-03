@@ -11,7 +11,7 @@
 <body>
     <!-- INICIO DO MENU -->
 		<ul id="menuID">
-			<a href="Inicio.aspx"><img class="logo" src="img/logo.png"></a>
+			<a href="Inicio.aspx"><img class="logo" src="img/logoPrincipal.png"></a>
 			<li class="logar"><a href="Login.aspx" target="blank" title="Entrar no sistema"><img class="loginIcon" src="img/login.png" a href="#"></a>
 			
 			</li>
