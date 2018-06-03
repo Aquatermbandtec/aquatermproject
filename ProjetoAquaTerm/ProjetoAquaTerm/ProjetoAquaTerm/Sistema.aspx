@@ -7,9 +7,221 @@
     <link rel="stylesheet" type="text/css" href="css/sistema.css" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>AquaTerm</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-    <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
-    <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+       
+        google.charts.load('current', { packages: ['corechart', 'line'] });
+        google.charts.setOnLoadCallback(desenharGrafico);
+
+
+        var total = 0, data = null, grafico = null;
+
+       
+
+        function desenharGrafico() {
+            if (data == null) {
+
+                data = new google.visualization.DataTable();
+                data.addColumn('number', 'Tempo');
+                data.addColumn('number', 'Temperatura');
+                data.addRow([undefined, undefined]);
+                grafico = new google.charts.Line(document.getElementById('chartdiv'));
+
+            }
+            var options = {
+                title: 'Variação de temperaturas',
+                color: ['#fff000'],
+                width: 420,
+                height: 400,
+                chartArea: { width: "50px", height: "70px" },
+                legend: { position: 'none' },
+                curverType: 'function',
+
+                vAxis: { minValue: 0, maxValue: 1000 },
+            };
+
+            grafico.draw(data, options);
+            
+
+            setTimeout(function () {
+                
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    url: 'controller/AtualizaDados.aspx/temperaturaAtual',
+                    data: '{}',
+                    success: function (response) {
+
+                        data.addRow([total, response.d]);//adiciona uma linha com duas colunas e insira os valores0(temperatura)valores1(tempo)
+                        total++;
+                        desenharGrafico();
+                        $('#lTemp').text(Math.floor(response.d) + "ºC");
+
+                    },
+                    error: function () {
+                    }
+                });
+
+            
+            }, 5000);
+
+            };
+      
+
+
+        //AJAX PARA PEGAR A MAIOR TEMPERATURA
+        var enviando = false;
+        setInterval(() => {
+
+            // SE ELE RETORNA UM VALOR NULO OU UM VALOR QUE OU NÃO CONVERTIDO ELE MOSTRARA O ULTIMO VALOR (POR PRECAUÇÃO)
+            if (!enviando) {
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    url: 'controller/AtualizaDados.aspx/temperaturaMaior',
+                    data: '{}',
+                    beforeSend: function () {
+                        enviando = true;
+                    },
+                    success: function (response) {
+                        $('#lAlta').text(Math.floor(response.d)+"ºC");
+                        //document.getElementById(chamadas[c].destino).innerHTML = Math.round(response.d);
+                        enviando = false;
+                    },
+
+                    error: function () {
+                    }
+                });
+            }
+
+            // ajax para pegar a maior temp
+            $.ajax({
+                type: 'POST',
+                dataType: 'json',
+                contentType: 'application/json',
+                url: 'controller/AtualizaDados.aspx/temperaturaMenor',
+                data: '{}',
+                beforeSend: function () {
+                    enviando = true;
+                },
+                success: function (response) {
+                    $('#lBaixa').text(Math.floor(response.d) + "ºC");
+                    //document.getElementById(chamadas[c].destino).innerHTML = Math.round(response.d);
+                    enviando = false;
+                },
+
+                error: function () {
+                }
+            });
+
+            //AJAX PARA PEGAR A MENOR TEMPERATURA
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    url: 'controller/AtualizaDados.aspx/temperaturaMedia',
+                    data: '{}',
+                    beforeSend: function () {
+                        enviando = true;
+                    },
+                    success: function (response) {
+                        $('#lMedia').text(Math.floor(response.d)+"ºC");
+                        //document.getElementById(chamadas[c].destino).innerHTML = Math.round(response.d);
+                        enviando = false;
+                    },
+
+                    error: function () {
+                    }
+            });
+            //AJAX PARA PEGAR A TEMPERATURA MÉDIA
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    url: 'controller/AtualizaDados.aspx/temperaturaMediana',
+                    data: '{}',
+                    beforeSend: function () {
+                        enviando = true;
+                    },
+                    success: function (response) {
+                        $('#lMediana').text(Math.floor(response.d)+"ºC");
+                        //document.getElementById(chamadas[c].destino).innerHTML = Math.round(response.d);
+                        enviando = false;
+                    },
+
+                    error: function () {
+                    }
+                });
+
+            //AJAX PARA PEGAR A TEMPERATURA MEDIANA
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    url: 'controller/AtualizaDados.aspx/temperaturaQuartilUm',
+                    data: '{}',
+                    beforeSend: function () {
+                        enviando = true;
+                    },
+                    success: function (response) {
+                        $('#lQuartilUm').text(Math.floor(response.d)+"ºC");
+                        //document.getElementById(chamadas[c].destino).innerHTML = Math.round(response.d);
+                        enviando = false;
+                    },
+
+                    error: function () {
+                    }
+                });
+
+            //AJAX PARA PEGAR O PRIMEIRO QUARTIL
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    url: 'controller/AtualizaDados.aspx/temperaturaQuartilTres',
+                    data: '{}',
+                    beforeSend: function () {
+                        enviando = true;
+                    },
+                    success: function (response) {
+                        $('#lQuartilTres').text(Math.floor(response.d)+"ºC");
+                        //document.getElementById(chamadas[c].destino).innerHTML = Math.round(response.d);
+                        enviando = false;
+                    },
+
+                    error: function () {
+                    }
+                });
+        }, 5000);
+
+
+     
+
+
+        // alerta de temperatura
+        //setInterval(() => {
+
+        //    var n = document.getElementById('lTemp').innerHTML;
+
+        //    if (n > 20){ 
+        //        var div = document.getElementById('conteudo').style.transition = "0.5s";
+        //        var div = document.getElementById('conteudo').style.backgroundColor = "blue";
+        //        var div = document.getElementById('conteudo').style.backgroundColor = "red";
+        //    }
+
+
+        //},100);
+
+
+
+
+
+        //Medidas de Analytics com o novo jeito
+        </script>
 </head>
 <body>
     <form name="form" runat="server">
@@ -18,9 +230,9 @@
 			<p id="voltar" onclick="myVoltar()">&#9776;</p>
 			<p id ="ir" onclick="myIr()">&#9776;</p> 								
 		</div>		
-		<div id="logo"><img src="img/peixinho22.png"></div>
+		<div id="logo"><img src="img/peixinho22.png"/></div>
 	</div>
-	<div id="bell"><img src="img/bellIcon.png" id="sino" ></div>
+	<div id="bell"><img src="img/bellIcon.png" id="sino" /></div>
 	<!--inicio menu-->
 	<div id="menuLateral">	
 		<div class="menuUsuario">
@@ -49,7 +261,7 @@
 	
 		
 		<div class="temperatura">
-		<div id="linha1">  <img src="img/timeIcon.png"> <p>Aquário</p></div>
+		<div id="linha1">  <img src="img/timeIcon.png"/> <p>Aquário</p></div>
 		
             <p class="pTempReal">TEMPERATURA ATUAL</p>
 				
@@ -61,17 +273,17 @@
 		</div>
 
 		<div class="grafico">
-			<canvas id="chart"></canvas>
+			<div id="chartdiv"></div>
 		</div>
 
 		<div class="medias">
-			<div id="linha2">  <img src="img/indicador.png"> <p>Medidas</p></div>
+			<div id="linha2">  <img src="img/indicador.png"/> <p>Medidas</p></div>
             
            <div class="mediaBloco"><img src="img/aquario.png"/>
                 
                 <asp:Label ID="lBaixa" runat="server" Text="0º"></asp:Label>
                 
-                <p class="pMedias">Temperatura Baixa</p></div>
+            <p class="pMedias">Temperatura Baixa</p></div>
 			<div class="mediaBloco"><img src="img/aquario.png"/><asp:Label ID="lQuartilUm" runat="server" Text="0º"></asp:Label><p class="pQuartil">1º Quartil</p></div>
 			<div class="mediaBloco"><img src="img/aquario.png"/><asp:Label ID="lMediana" runat="server" Text="0º"></asp:Label><p class="pMediana">Mediana</p></div>
 			<div class="mediaBloco"><img src="img/aquario.png"/><asp:Label ID="lMedia" runat="server" Text="0º"></asp:Label><p class="pMedias">Temperatura Media</p></div>
@@ -80,7 +292,7 @@
 		</div>	
 			
 		<div class="cxTexto">
-			<div id="linha1"> <img src="img/listIcon.png"> <p>Anotações</p> </div>
+			<div id="linha1"> <img src="img/listIcon.png"/> <p>Anotações</p> </div>
 			<div id="textoCss">
        <asp:TextBox ID="txtAnotacoes" runat="server" TextMode="MultiLine" CssClass="txtAnotacoes" placeholder="Faça suas anotaçoes aqui"></asp:TextBox>
 			</div>
@@ -91,11 +303,11 @@
 		</div>
 		
 		<div id="peixes">
-			<div id="linha1"> <img src="img/fishIcon.png"> <p>Meu Aquário:</p> </div>
+			<div id="linha1"> <img src="img/fishIcon.png"/> <p>Meu Aquário:</p> </div>
 			<div id="peixe01">		
-				<img src="img/px01.jpg">
+				<img src="img/px01.jpg"/>
 				<div class="middle">
-					<button id="trocar" name="trocarFT" onclick="#"><img src="img/cameraIcon.png"></button>					
+					<button id="trocar" name="trocarFT" onclick="#"><img src="img/cameraIcon.png"/></button>					
 				</div>	
 				
 
@@ -109,9 +321,9 @@
                </div>
 			
 			<div id="peixe01">	
-				<img src="img/px02.jpg">
+				<img src="img/px02.jpg"/>
 				<div class="middle">
-				<button id="trocar" name="trocarFT" onclick="#"><img src="img/cameraIcon.png"></button>						
+				<button id="trocar" name="trocarFT" onclick="#"><img src="img/cameraIcon.png"/></button>						
 				</div>				
 				
 				<asp:TextBox ID="txtNomePeixe2" runat="server" CssClass="infoPeixe" placeholder="Nome"></asp:TextBox>
@@ -123,12 +335,10 @@
             </div>
 			
 			<div id="peixe01">	
-				<img src="img/px03.jpg">
+				<img src="img/px03.jpg"/>
 				<div class="middle">
-					<button id="trocar" name="trocarFT" onclick="#"><img src="img/cameraIcon.png"></button>	
+					<button id="trocar" name="trocarFT" onclick="#"><img src="img/cameraIcon.png"/></button>	
 				</div>				
-				
-
 
 				<asp:TextBox ID="txtNomePeixe3" runat="server" CssClass="infoPeixe" placeholder="Nome"></asp:TextBox>
                 <asp:TextBox ID="txtEspeciePeixe3" runat="server" CssClass="infoPeixe" placeholder="Espécie"></asp:TextBox>
@@ -166,87 +376,11 @@
 
 
         // Abrir Desenho do grafico
-        var context = document.getElementById("chart").getContext("2d");
-        context.canvas.width = 500;
-        context.canvas.height = 400;
         
-
-
-        var configuration = {
-            type: 'line',
-            data: {
-                datasets: [{
-                    label: "Variação de Temperatura",
-                    type: 'line',
-                }]
-            },
-            options: {
-                scales: {
-                    xAxes: [{
-                        //type: 'value',
-                        distribution: 'series',
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }],
-                    yAxes: [{
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Temperatura'
-                        },
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                },
-                animation: {
-                    duration: 0
-                }
-            }
-        };
-
-        var chart = new Chart(context, configuration);
-        // Fechar Desenho do Grafico
-
-        // Abrir Função de jogar a temperatura na Label
-        this.lastIndexTemp = 0;
-        this.time = 0;
-
-        function get_data() {
-
-            var http = new XMLHttpRequest();
-            http.open('GET', 'http://localhost:3000/api', false);
-            http.send(null);
-
-            var obj = JSON.parse(http.responseText);
-
-            if (obj.data.length == 0) {
-                return;
-            }
-
-            var _lastIndexTemp = this.lastIndexTemp;
-            this.lastIndexTemp = obj.data.length;
-            listTemp = obj.data.slice(_lastIndexTemp);
-
-            listTemp.forEach(data => {
-
-                if (chart.data.labels.length == 10 && chart.data.datasets[0].data.length == 10) {
-                    chart.data.labels.shift();
-                    chart.data.datasets[0].data.shift();
-                }
-
-                chart.data.labels.push(this.time++);
-                chart.data.datasets[0].data.push(parseFloat(data));
-                chart.update();
-            });
-        }
-
-        get_data();
-
 
         //  CRIA UMA VETOR QUE RECEBE TODOS OS ARQUIVOS QUE ESTÃO FAZENDO A ATUALIZAÇÃO E JOGANDO ELES NAS LABELS
         // ISSO ANTES DO SETINTERVAL
-
+        /*
         var chamadas = [
             { pagina: 'AtualizaMenor.aspx', destino: 'lBaixa' },
             { pagina: 'AtualizaMaior.aspx', destino: 'lAlta' },
@@ -256,6 +390,7 @@
             { pagina: 'AtualizaMediana.aspx', destino: 'lMediana' },
             { pagina: 'AtualizaMedia.aspx', destino: 'lMedia' }
         ]
+        
 
         setInterval(() => {
 
@@ -286,6 +421,7 @@
 
             }
         }, 5000);
+        */
 
     </script>
 </body>

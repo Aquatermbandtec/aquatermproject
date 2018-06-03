@@ -74,6 +74,11 @@ body {
     flex-wrap: wrap;
 }
 
+#chartdiv {
+    width:450px;
+    height:400px;
+}
+
 #tempEgrafico {
     margin-bottom: 50px;
     width: 59%;

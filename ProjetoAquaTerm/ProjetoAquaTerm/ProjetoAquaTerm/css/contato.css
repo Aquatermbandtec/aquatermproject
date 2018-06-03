@@ -273,10 +273,10 @@ p#info {
 }
 
 ::-webkit-scrollbar-thumb:vertical {
-    background: rgba(7,48,85,0.9);
+    background: #8cb9f1;
 }
 
 ::-webkit-scrollbar-thumb:horizontal {
     border-radius: 40px;
-    background: rgba(7,48,85,0.9);
+    background: #8cb9f1;
 }
