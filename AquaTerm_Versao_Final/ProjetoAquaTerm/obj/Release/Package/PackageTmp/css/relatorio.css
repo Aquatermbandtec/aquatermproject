@@ -1,0 +1,92 @@
+﻿* {
+    padding: 0px;
+    margin: 0px;
+}
+
+#relatorios {
+    width: 682px;
+    height: 100%;
+    position: absolute;
+    background-color: transparent;
+}
+
+#logo {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border-radius: 50%;
+    margin: 30px;
+    background-image: url(/img/logoPrincipal.png);
+    background-position: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#dados {
+    position: relative;
+    float: right;
+    width: 180px;
+    height: 100px;
+    background-color: transparent;
+    margin-top: -180px;
+    top: 0px;
+    right: 0px;
+}
+
+    #dados p {
+        font-family: helvetica;
+        margin: 10px;
+        font-size: 17px;
+        font-style: bold;
+        width: 100%;
+    }
+
+#valores {
+    position: relative;
+    width: 682px;
+    height: 412px;
+    background-color: transparent;
+}
+
+table, th, td {
+    border: 0.5px solid black;
+    padding: 5px;
+}
+
+#tabela {
+    width: 100%;
+    font-family: helvetica;
+    font-size: 15px;
+}
+
+tr {
+    text-align: center;
+}
+
+#lValida {
+    display: none;
+}
+
+#lQuantas {
+    font-family: helvetica;
+    font-size: 17px;
+    width: 100%;
+}
+
+#lNomeUser {
+    font-family: helvetica;
+    font-size: 17px;
+    width: 100%;
+}
+
+#lEmailUser {
+    font-family: helvetica;
+    font-size: 17px;
+    width: 100%;
+}
+
+#lTelefoneUser {
+    font-family: helvetica;
+    font-size: 17px;
+    width: 100%;
+}

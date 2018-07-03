@@ -1,0 +1,827 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: rgb(245,245,245);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#bemVindo h1 {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 25px;
+    font-family: Helvetica;
+    font-size: 30px;
+    font-kerning: normal;
+    font-stretch: extra-expanded;
+}
+
+#lAuxiliar {display:none;}
+
+
+.linha1 {
+    background-color: rgb(0,140,186);
+    width: 100%;
+    height: 50px;
+}
+
+    .linha1 p {
+        color: white;
+        font-size: 25px;
+        padding: 10px;
+        font-family: Helvetica;
+    }
+
+    .linha1 img {
+        width: 40px;
+        float: right;
+        margin: 5px;
+    }
+
+/*linha 2 aqui*/
+
+#linha2 {
+    background-color: rgb(0,140,186);
+    width: 100%;
+    height: 50px;
+}
+
+    #linha2 p {
+        color: white;
+        font-size: 25px;
+        padding: 10px;
+        font-family: Helvetica;
+    }
+
+    #linha2 img {
+        width: 40px;
+        float: right;
+        margin: 5px;
+    }
+
+/*fecha linha 2*/
+
+#conteudo {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 5%;
+}
+
+#chartdiv {
+    width:450px;
+    height:400px;
+}
+
+#tempEgrafico {
+    margin-bottom: 50px;
+    width: 59%;
+    float: left;
+}
+
+.temperatura {
+    background-color: #fff;
+    width: 250px;
+    height: 440px;
+    margin: 10px;
+    float: left;
+    border: solid 2px rgba(136, 136, 136, 0.2);
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.btnRelatorio {
+    position: relative;
+    height: 35px;
+    width: 195px;
+    background: #fabd6b;
+    color: white;
+    text-align: center;
+    font-size: 14.5px;
+    border: 0 none;
+    cursor: pointer;
+    margin-left: 29px;
+    margin-top: 140px;
+}
+
+.grafico {
+    background-color: #fff;
+    width: 455px;
+    height: 400px;
+    margin-left: 10px;
+    padding: 20px;
+    float: left;
+    border: solid 2px rgba(136, 136, 136, 0.2);
+}
+
+.medias {
+    justify-content:center;
+    flex-wrap:wrap;
+    display:flex;
+    background-color: #fff;
+    width: 330px;
+    height: 440px;
+    margin: 20px;
+    float: left;
+    border: solid 2px rgba(136, 136, 136, 0.2);
+    padding-bottom: 2px;
+}
+
+#lBaixa {
+    position: absolute;
+    font-size: 25px;
+    font-family: helvetica;
+    margin-top: 35px;
+    margin-left: 45px;
+}
+
+#lQuartilUm {
+    position: absolute;
+    font-size: 25px;
+    font-family: helvetica;
+    margin-top: 35px;
+    margin-left: 45px;
+}
+
+#lMediana {
+    position: absolute;
+    font-size: 25px;
+    font-family: helvetica;
+    margin-top: 35px;
+    margin-left: 45px;
+}
+
+#lMedia {
+    position: absolute;
+    font-size: 25px;
+    font-family: helvetica;
+    margin-top: 35px;
+    margin-left: 45px;
+}
+
+#lQuartilTres {
+    position: absolute;
+    font-size: 25px;
+    font-family: helvetica;
+    margin-top: 35px;
+    margin-left: 45px;
+}
+
+#lAlta {
+    position: absolute;
+    font-size: 25px;
+    font-family: helvetica;
+    margin-top: 35px;
+    margin-left: 45px;
+}
+
+.pMedias {
+    position: absolute;
+    margin-left: 10px;
+    font-family: helvetica;
+    font-size: 15px;
+    margin-top: 100px;
+}
+
+.pQuartil {
+    position: absolute;
+    margin-left: 40px;
+    font-family: helvetica;
+    font-size: 15px;
+    margin-top: 100px;
+}
+
+.pMediana {
+    position: absolute;
+    margin-left: 40px;
+    font-family: helvetica;
+    font-size: 15px;
+    margin-top: 100px;
+}
+
+
+.mediaBloco {
+    margin: 10px;
+    width: 143px;
+    height: 100px;
+    margin-bottom: 20px;
+    
+}
+
+    .mediaBloco img {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        margin-top: 10px;
+        margin-left: 30px;
+    }
+
+/*INICIO CSS CAIXA DE TEXTO*/
+.cxTexto {
+    margin: 10px;
+    background-color: white;
+    width: 265px;
+    height: 400px;
+    padding-bottom: 50px;
+    float: left;
+    border-radius: 15px 15px 0px 0px;
+    border: solid 2px rgba(136, 136, 136, 0.2);
+}
+
+#textoCss {
+    margin-left:1px;
+    padding: 5px;
+    background-color: white;
+    width: 240px;
+
+}
+
+
+#sino {
+    -webkit-animation: rotation 1.5s linear infinite;
+}
+
+
+
+ .txtAnotacoes {
+padding: 5px;
+width: 100%;
+height: 320px;
+resize: none;
+border-radius: 10px;
+font-family: Helvetica;
+font-size: 20px;
+}
+
+.btnSalvar {
+    height: 35px;
+    width: 100px;
+    background: #488dc5;
+    color: white;
+    font-family: "Helvetica";
+    font-size: 14.5px;
+    font-style: bold;
+    border: 0 none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 30%;
+    margin-top: 10px;
+}
+
+
+/*FIM CSS CAIXA DE TEXTO*/
+.cadPeixeMenu {
+    margin-top: 50px;
+}
+
+    .cadPeixeMenu p {
+        font-family: Helvetica, sans-serif;
+        font-size: 15px;
+        font-weight: 100;
+        MARGIN-BOTTOM: 30PX;
+        color: rgb(182, 199, 208);
+        text-align: center;
+    }
+
+.cadInfoPeixe {
+    width: 90%;
+    text-align: center;
+    margin-left: 5%;
+    height: 30px;
+    background-color: transparent;
+    outline: 0;
+    border: 1px solid gray;
+    border-left: none;
+    border-top: none;
+    color:gray;
+    font-size: 17px;
+    border-right: none;
+    font-family: "helvetica";
+}
+
+.cadSalvarInfos {
+    background-color: #3fa9dd;
+    border: none;
+    color: white;
+    margin-top: 10px;
+    margin-left: 30%;
+    width: 80px;
+    height: 25px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.cadSalvarInfos:hover {
+    transition: all 0.3s;
+    background-color: rgb(0,140,186);
+}
+
+#peixes {
+    margin: 20px;
+    min-height: 450px;
+    width: 830px;
+    float: inherit;
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 15px 15px 0px 0px;
+    border: solid 2px rgba(136, 136, 136, 0.2);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.peixe01 {
+    float: left;
+    width: 30%;
+    height: 85%;
+    background-color: #daeff3;
+    display: inline-block;
+    margin: 12px;
+}
+
+    .peixe01 img {
+        position: relative;
+        width: 99%;
+        height: 30%;
+        opacity: 1;
+        display: block;
+        transition: .5s ease;
+        backface-visibility: hidden;
+        margin-bottom: 10%;
+    }
+
+
+.middle {
+    transition: .5s ease;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: -35%;
+    margin-left: 85%;
+}
+
+.trocar {
+    background-color: transparent;
+    color: white;
+    font-size: 12px;
+    border: 0 none;
+    text-align: center;
+    cursor: pointer;
+}
+
+    .trocar img {
+        width: 40px;
+        height: 40px;
+    }
+
+.infoPeixe {
+    position: relative;
+    width: 80%;
+    height: 6%;
+    margin-left: 10%;
+    resize: none;
+    margin-bottom: 4%;
+    color: #525252;
+    text-align: center;
+    font-size: 19px;
+    padding: 1%;
+    font-family: "Helvetica";
+    border: none;
+}
+
+/*#txtTemperaturaPeixe3 {
+    position: relative;
+    width: 80%;
+    height: 6%;
+    margin-left: 10%;
+    resize: none;
+    margin-bottom: 4%;
+    color: #525252;
+    text-align: center;
+    font-size: 19px;
+    padding: 1%;
+    font-family: "Helvetica";
+    border: none;
+}
+
+#txtEspeciePeixe3 {
+    position: relative;
+    width: 80%;
+    height: 6%;
+    margin-left: 10%;
+    resize: none;
+    margin-bottom: 4%;
+    color: #525252;
+    text-align: center;
+    font-size: 19px;
+    padding: 1%;
+    font-family: "Helvetica";
+    border: none;
+}
+
+#txtNomePeixe3 {
+    position: relative;
+    width: 80%;
+    height: 6%;
+    margin-left: 10%;
+    resize: none;
+    margin-bottom: 4%;
+    color: #525252;
+    text-align: center;
+    font-size: 19px;
+    padding: 1%;
+    font-family: "Helvetica";
+    border: none;
+}*/
+
+
+
+
+.salvarInfos {
+    position:relative;
+    background-color: #fabd6b;
+    color: white;
+    font-size: 14px;
+    padding: 6px 35px;
+    border: 0 none;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 26%;
+    margin-bottom: 10px;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.menu {
+    position: fixed;
+    z-index: 9 !important;
+    width: 100%;
+    top: 0px;
+    height: 70px;
+    background-color: rgb(0,140,186);
+    box-shadow: 2px 2px rgba(136, 136, 136, 0.2);
+}
+
+#logo {
+    float: right;
+}
+
+    #logo img {
+        padding: 10px;
+        width: 210px;
+    }
+
+#ir {
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    position: absolute;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+#voltar {
+    color: white;
+    font-size: 23px;
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+#voltar:hover {
+        color: rgb(1, 52, 135);
+        transition: all 0.3s;
+}
+
+#ir:hover {
+    color: rgb(1, 52, 135);
+    transition: all 0.3s;
+}
+
+.risquinho {
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-top: 12px;
+    margin-left: 22px;
+    background-color: transparent;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+
+
+#menuLateral {
+        left: 0px;
+        position: fixed;
+        width: 0px;
+        min-height: calc(100% - 70px);
+        margin-top: -10px;
+        background-color: rgb(38,50,56);
+        transition: all 0.3s;
+        overflow: hidden;
+        z-index: 9 !important;
+        box-shadow: 2px 2px rgba(136, 136, 136, 0.2);
+ }
+
+
+
+
+.ulSair {
+    position: absolute;
+    bottom: 0px;
+    cursor: pointer;
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    display: initial;
+    background-color: transparent;
+}
+
+.menuLi {
+    font-family: helvetica;
+    font-size: 17px;
+    display: block;
+    color: rgb(132,150,159);
+    padding: 8px 16px;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+#txtValorTemp {
+    width: 80px;
+    background-color: transparent;
+    outline: 0;
+    border-bottom: 1px solid gray;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    color: gray;
+    font-family: "helvetica";
+}
+
+#btnValorTemp {
+    background-color: #3fa9dd;
+    border:none;
+    color:white;
+    width: 70px;
+    height: 25px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#btnValorTemp:hover {
+    transition: all 0.3s;
+    background-color: rgb(0,140,186); 
+}
+
+#btnAtualizarValorTemp {
+    background-color: #3fa9dd;
+    border: none;
+    color: white;
+    font-family: "heveltica";
+    border-radius: 5px;
+    width: 70px;
+    height: 25px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#btnAtualizarValorTemp:hover {
+    transition: all 0.3s;
+    background-color: rgb(0,140,186);
+}
+
+.sairLi {
+    cursor: pointer;
+    font-family: helvetica;
+    font-size: 17px;
+    display: block;
+    color: rgb(132,150,159);
+    padding: 8px 16px;
+    padding-left: 75px;
+    text-decoration: none;
+    overflow: hidden;
+    font-style: bold;
+}
+
+.sairLi:hover {
+    transition: all 0.5s;
+    background-color: rgba(132, 150, 159,0.2);
+    color: white;
+}
+
+.menuUsuario {
+    width: 100%;
+    height: 60px;
+    background-color: transparent;
+}
+
+.nomeUsuario {
+    font-family: helvetica;
+    font-size: 16px;
+    position: absolute;
+    padding-left: 90px;
+    margin-top: 20px;
+    color: rgb(132,150,159);
+}
+
+.fotoUsuario {
+    height: 60px;
+    position: absolute;
+    background-image: url(/img/user.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 60px;
+    border-radius: 50px;
+    margin-left: 10px;
+}
+
+
+#redondoTemp {
+    position:relative;
+    margin-top: -10px;
+    width: 250px;
+    height: 160px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 40px;
+    font-family: "Helvetica";
+}
+
+#lTemp {
+    position:absolute;
+    z-index: 5;
+    margin-top: 80px;
+    margin-left: 50px;
+}
+
+.pTempReal {
+    font-family: Helvetica;
+    font-size: 18px;
+    z-index: 1;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+    #redondoTemp img {
+        width: 200px;
+        position: absolute;
+        margin-top: 90px;
+    }
+
+.pMedia {
+    font-family: "Helvetica";
+    font-size: 15px;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+/*abre css das notificaçoes*/
+
+#notifica {
+    display: none;
+    position: fixed;
+    z-index: 9 !important;
+    margin-top: 26%;
+    margin-left: 88%;
+    width: 160px;
+    height: 105px;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px;
+    color: gray;
+    background-color: black;
+}
+
+.linha {
+    width: 100%;
+    height: 20px;
+    background-color: transparent;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.linhaBaixo {
+    width: 100%;
+    height: 5px;
+    background-color: transparent;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#notifica p {
+    width: 100%;
+    font-family: "helvetica";
+    font-size: 15px;
+}
+
+.linha img {
+    width: 30px;
+    height: 30px;
+}
+
+.linhaBaixo img {
+    width: 30px;
+    height: 30px;
+    margin-top: -3px;
+}
+
+/*fecha css das notificaçoes*/
+
+
+#bell {
+    z-index: 9 !important;
+    position: fixed;
+    margin-top: 35%;
+    margin-left: 93.0%;
+    animation: girar 0.5s infinite alternate;
+    display:none;
+}
+
+    #bell img {
+        margin: 5px;
+        width: 60px;
+        float: right
+    }
+@keyframes girar {
+    0% {
+        transform: rotateZ(47deg);
+    }
+
+    100% {
+        transform: rotateZ(-47deg);
+    }
+}
+
+
+.ds-none {
+display:none;
+
+}
+
+.img1 {
+    position: absolute;
+    height: 164px;
+}
+
+
+.dataDeHoje {
+    width: 100%;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    margin-top: 70px;
+    justify-content: center;
+    background-color: transparent;
+    align-items: center;
+    color: rgb(132,150,159);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    .dataDeHoje p {
+        font-family: helvetica;
+        font-size: 17px;
+        display: block;
+        padding: 8px 16px;
+        text-decoration: none;
+        overflow: hidden;
+    }
+
+#timer > .hours:after, #timer > .minutes:after {
+    content: ":";
+    font-family: helvetica;
+    font-size: 17px;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+#timer {
+    background-color: transparent;
+    position: relative;
+    margin: 7px;
+}
